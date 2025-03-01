@@ -2,7 +2,7 @@
 <br />
 <p align="center">
   <a href="https://github.com/GiacomoBorsellino/app-unti2">
-    <img src="https://raw.githubusercontent.com/GiacomoBorsellino/app-unti2/mockup/thumbs/mock-list.png" alt="Logo" width="200">
+    <img src="https://github.com/GiacomoBorsellino/app-unti2/blob/main/mockup/thumbs/lohacker.svg" alt="Logo" width="200">
   </a>
 
   <h3 align="center">App-unti</h3>
