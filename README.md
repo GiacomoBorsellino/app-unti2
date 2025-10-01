@@ -34,7 +34,7 @@
 
 ## API e utilizzo
 
-Semplice consultazione tramite demo live al seguente link: https://app-unti2.netlify.app/
+Semplice consultazione tramite demo live al seguente link: https://anointed.netlify.app/
 
 ## Prerequisiti
 
@@ -51,7 +51,7 @@ Semplice consultazione tramite demo live al seguente link: https://app-unti2.net
 2. Entra nella cartella
 
    ```sh
-   Cd app-unti
+   Cd app-unti2
    ```
 
 3. Installa NPM
@@ -59,9 +59,14 @@ Semplice consultazione tramite demo live al seguente link: https://app-unti2.net
    ```sh
    npm install npm@latest -g
    npm install
+   npm run dev
    ```
 
-4. Avvia il progetto usando l'estensione live server
+4. Avvia il progetto
+
+ ```sh
+   npm run dev
+   ```
 
 ## Licenza
 
