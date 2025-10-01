@@ -1,14 +1,13 @@
-
 <br />
 <p align="center">
   <a href="https://github.com/GiacomoBorsellino/app-unti2">
     <img src="https://github.com/GiacomoBorsellino/app-unti2/blob/main/mockup/thumbs/lohacker.svg" alt="Logo" width="200">
   </a>
 
-  <h3 align="center">App-unti</h3>
+  <h3 align="center">aNOinTEd</h3>
 
   <p align="center">
-    Raccoglitore di appunti 2.0 e cheetsheet inerenti vari argomenti
+    Collector of notes about coding and courses
   </p>
 </p>
 
@@ -25,18 +24,21 @@
 
 ## Tecnologie/Argomenti
 
-* HTML5
-* Tailwind CSS
-* Javascript
-* Webpack
-* NPM
+- HTML5
+- Tailwind CSS
+- Typescript
+- React
+- Vite
+- ShadCN UI
+- Webpack
 
 ## API e utilizzo
+
 Semplice consultazione tramite demo live al seguente link: https://app-unti2.netlify.app/
 
 ## Prerequisiti
 
-* Nessuno
+- Nessuno
 
 ## Installazione
 
@@ -56,7 +58,7 @@ Semplice consultazione tramite demo live al seguente link: https://app-unti2.net
 
    ```sh
    npm install npm@latest -g
-   npm install 
+   npm install
    ```
 
 4. Avvia il progetto usando l'estensione live server
@@ -75,5 +77,5 @@ Link all'app: [App-unti](https://app-unti2.netlify.app/)
 
 ## Crediti
 
-* [Best-README-Template](https://github.com/othneildrew/Best-README-Template)
-* [Tailwind CSS](https://tailwindcss.com/)
+- [Best-README-Template](https://github.com/othneildrew/Best-README-Template)
+- [Tailwind CSS](https://tailwindcss.com/)

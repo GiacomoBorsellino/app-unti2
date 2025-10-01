@@ -1,4 +1,3 @@
-import "./App.css";
 import {
   Menubar,
   //   MenubarCheckboxItem,
@@ -15,7 +14,7 @@ import {
   MenubarTrigger,
 } from "@/components/ui/menubar";
 
-import lohacker from "./assets/lohacker.svg";
+import lohacker from "../assets/lohacker.svg";
 import { Link } from "react-router-dom";
 import { Button } from "../components/ui/button";
 

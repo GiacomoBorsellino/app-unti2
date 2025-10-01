@@ -11,7 +11,7 @@ import { useState } from "react";
 export default function SwitchVisualization({ setVisualization }: any) {
   const [isChecked, setIsChecked] = useState(Boolean);
 
-  function handleChange(e: any) {
+  function handleChange() {
     // ✅ Updating a controlled input to e.target.value synchronously
     setIsChecked(!isChecked);
     setVisualization(!isChecked);
@@ -25,8 +25,8 @@ export default function SwitchVisualization({ setVisualization }: any) {
           <TooltipTrigger asChild>
             <Switch
               id="visualization"
-              onCheckedChange={(e: any) => {
-                handleChange(e);
+              onCheckedChange={() => {
+                handleChange();
               }}
             />
           </TooltipTrigger>
