@@ -1,7 +1,5 @@
 import { Menubar, MenubarMenu } from "@/components/ui/menubar";
 
-import { Link } from "react-router-dom";
-
 import "./List.css";
 import { Button } from "@/components/ui/button";
 
