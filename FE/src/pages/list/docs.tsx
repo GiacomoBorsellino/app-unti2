@@ -32,7 +32,7 @@ export default function Docs({ category }: DocsProps) {
                 className="border-border shadow-shadow rounded-base bg-main border-2 p-4 sm:p-5"
                 key={document.id}
               >
-                <div className="bg-white border-border shadow-shadow rounded-base -bottom-[2px]! border-2 ">
+                <div className="bg-white border-border shadow-shadow rounded-base bottom-[2px]! border-2 ">
                   <img
                     className="rounded-base w-4/5 mx-auto"
                     src={document.img}

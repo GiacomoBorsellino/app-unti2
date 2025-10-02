@@ -19,7 +19,7 @@ export default function SwitchVisualization({ setVisualization }: any) {
   }
 
   return (
-    <div className="flex items-center space-x-2">
+    <div className="space-x-2 hidden sm:block">
       <TooltipProvider>
         <Tooltip>
           <TooltipTrigger asChild>

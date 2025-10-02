@@ -1,33 +1,40 @@
 import "./App.css";
 import Footer from "./common/footer";
-import Menu from "./common/menu";
+import Header from "./common/header";
 
 import { Outlet } from "react-router-dom";
 
 function App() {
   return (
     <>
-      <nav>
-        <Menu></Menu>
-      </nav>
+      <div className="flex flex-col justify-center gap-5">
+        <header
+          style={{
+            height: "5vh",
+          }}
+        >
+          <Header></Header>
+        </header>
 
-      <main
-        className="bg-main my-6 rounded-md border-2 border-black p-2"
-        style={{
-          backgroundSize: "40px 40px",
-          backgroundColor: "#e3e3e3",
-          backgroundImage:
-            "radial-gradient(circle, #282a36 1px, rgba(0, 0, 0, 0) 1px)",
-          height: "80vh",
-          overflowY: "scroll",
-        }}
-      >
-        <Outlet />
-      </main>
+        <main
+          style={{
+            height: "85vh",
+            width: "95vw",
+            margin: "auto",
+          }}
+        >
+          <Outlet />
+        </main>
 
-      <footer className="bottom text-center">
-        <Footer></Footer>
-      </footer>
+        <footer
+          className="text-center"
+          style={{
+            height: "5vh",
+          }}
+        >
+          <Footer></Footer>
+        </footer>
+      </div>
     </>
   );
 }

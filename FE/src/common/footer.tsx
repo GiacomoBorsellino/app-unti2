@@ -1,7 +1,10 @@
 function Footer() {
+  let year: number = new Date().getFullYear();
   return (
     <>
-      <footer className="text-white">Giacomo Borsellino 2025 tm</footer>
+      <footer className="flex flex-col justify-center items-center text-white text-semibold pt-2">
+        <h1>Giacomo Borsellino {year} ™</h1>
+      </footer>
     </>
   );
 }
