@@ -3,6 +3,8 @@
 # FE
 
 - style scrollbars
+- homepage
+- sistema stile
 - Scrivi wtf
 - Amplia about me
 - Metti input ricerca in list
