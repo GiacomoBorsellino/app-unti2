@@ -5,17 +5,16 @@ import type { docInterface } from "@/data/projects/documentsInterface";
 
 import "./List.css";
 
-interface DocsProps {
-  category: string;
-}
-
-export default function Docs({ category }: DocsProps) {
+export default function Docs({ category, titleFiltered }: any) {
   const [selectedCategory, setSelectedCategory] = useState(category);
+
+  const [selectedTitle, setSelectedTitle] = useState(titleFiltered);
 
   // ogni volta che la prop "category" cambia → aggiorno lo stato interno
   useEffect(() => {
     setSelectedCategory(category);
-  }, [category]);
+    setSelectedTitle(titleFiltered);
+  }, [category, titleFiltered]);
 
   return (
     <div>
@@ -25,6 +24,11 @@ export default function Docs({ category }: DocsProps) {
             return selectedCategory === "" || selectedCategory === "all"
               ? docs
               : docs.tag.includes(selectedCategory);
+          })
+          .filter((docs: docInterface) => {
+            return selectedTitle === "" || selectedTitle === null
+              ? docs
+              : docs.name.toLowerCase().includes(selectedTitle.toLowerCase());
           })
           .map((document: docInterface) => {
             return (

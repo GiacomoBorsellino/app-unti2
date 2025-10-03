@@ -5,13 +5,19 @@ import Selectors from "./Selectors";
 import TableData from "./table";
 
 import "./List.css";
-import Buttons from "./buttons";
+import { Input } from "@/components/ui/input";
 
 function List() {
   const [data, setData] = useState("");
 
   function setCategory(category: string): void {
     setData(category);
+  }
+
+  const [title, setTitle] = useState("");
+
+  function searchTitle(titleFiltered: string): void {
+    setTitle(titleFiltered);
   }
 
   const [visu, setVis] = useState(Boolean);
@@ -23,8 +29,14 @@ function List() {
   return (
     <>
       <div className="flex flex-col gap-2 justify-center items-start w-full">
-        <section>
-          <Buttons></Buttons>
+        <section className="flex flex-row gap-2 justify-start items-center">
+          <Input
+            className="w-[200px]"
+            type="text"
+            placeholder="Search"
+            value={title}
+            onChange={(e: any) => searchTitle(e.target.value)}
+          />
         </section>
 
         <section
@@ -51,7 +63,7 @@ function List() {
                 height: "70vh",
               }}
             >
-              <TableData category={data}></TableData>
+              <TableData category={data} titleFiltered={title}></TableData>
             </section>
           ) : (
             <section
@@ -64,7 +76,7 @@ function List() {
                 height: "70vh",
               }}
             >
-              <Docs category={data}></Docs>
+              <Docs category={data} titleFiltered={title}></Docs>
             </section>
           )}
         </section>

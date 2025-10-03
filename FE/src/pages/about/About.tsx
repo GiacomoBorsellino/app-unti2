@@ -5,7 +5,7 @@ function About() {
   return (
     <>
       <main className="flex flex-col gap-4 justify-center items-center bg-white border-2 border-black rounded-md p-2">
-        <h1 className="text-4xl font-bold">About-me</h1>
+        <h1 className="text-4xl font-bold">About me</h1>
         <ImageCard
           caption="``I try to code my best way, i try to be what i say``"
           imageUrl={me}

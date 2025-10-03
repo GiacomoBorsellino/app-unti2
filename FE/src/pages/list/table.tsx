@@ -9,19 +9,22 @@ import {
   TableHeader,
   TableRow,
 } from "@/components/ui/table";
-import type { DocsPropsInterface } from "@/data/projects/DocsPropsInterface";
+// import type { DocsPropsInterface } from "@/data/projects/DocsPropsInterface";
 import documents from "@/data/projects/documents";
 import type { docInterface } from "@/data/projects/documentsInterface";
 
 import { useEffect, useState } from "react";
 
-export default function TableData({ category }: DocsPropsInterface) {
+export default function TableData({ category, titleFiltered }: any) {
   const [selectedCategory, setSelectedCategory] = useState(category);
+
+  const [selectedTitle, setSelectedTitle] = useState(titleFiltered);
 
   // ogni volta che la prop "category" cambia → aggiorno lo stato interno
   useEffect(() => {
     setSelectedCategory(category);
-  }, [category]);
+    setSelectedTitle(titleFiltered);
+  }, [category, titleFiltered]);
 
   return (
     <Table className="rounded-md card">
@@ -43,6 +46,11 @@ export default function TableData({ category }: DocsPropsInterface) {
             return selectedCategory === "" || selectedCategory === "all"
               ? docs
               : docs.tag.includes(selectedCategory);
+          })
+          .filter((docs: docInterface) => {
+            return selectedTitle === "" || selectedTitle === null
+              ? docs
+              : docs.name.toLowerCase().includes(selectedTitle.toLowerCase());
           })
           .map((doc: docInterface) => (
             <TableRow key={doc.id}>
