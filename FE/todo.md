@@ -2,6 +2,7 @@
 
 # FE
 
+- style scrollbars
 - Scrivi wtf
 - Amplia about me
 - Metti input ricerca in list
