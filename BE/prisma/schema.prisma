@@ -1,0 +1,33 @@
+generator client {
+  provider = "prisma-client-js"
+  output   = "../generated/prisma"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model Document {
+  id          Int                  @id @default(autoincrement())
+  name        String               @unique
+  description String
+  pathImg     String
+  pathFile    String
+  categories  DocumentCategories[] // Esplicito la tabella di relazione per rinominare colonne
+}
+
+model Categories {
+  id          Int                  @id @default(autoincrement())
+  description String
+  documents   DocumentCategories[] // Esplicito la tabella di relazione per rinominare colonne
+}
+
+model DocumentCategories {
+  document   Document   @relation(fields: [documentId], references: [id])
+  documentId Int
+  category   Categories @relation(fields: [categoryId], references: [id])
+  categoryId Int
+
+  @@id([documentId, categoryId]) // PK composta
+}

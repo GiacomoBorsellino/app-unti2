@@ -12,6 +12,7 @@
 
 # BE
 
+- [] controlla "type": "commonjs",
 - [] semplice db
 - [] blob thumb
 - [] user
