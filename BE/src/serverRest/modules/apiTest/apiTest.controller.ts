@@ -29,9 +29,9 @@ export const apiTestDb2_secondary = async (req: Request, res: Response) => {
     });
 };
 
-export const apiTestDb2_monitoraggio = async (req: Request, res: Response) => {
+export const apiTestDb2_secondaryB = async (req: Request, res: Response) => {
   console.log(
-    "Sono nel Controller apiTest apiTestDb2_monitoraggio ma da altro db"
+    "Sono nel Controller apiTest apiTestDb2_secondary ma da altro db"
   );
   await db.main.document.findFirst().then((data) => {
     res.json(data);

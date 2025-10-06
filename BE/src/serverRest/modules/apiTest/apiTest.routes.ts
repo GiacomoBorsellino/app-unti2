@@ -16,6 +16,6 @@ router.use(
 router.get("/1/apiTestDb1_main", [], controller.apiTestDb1_main); // [middleware.checkToken],
 router.get("/1/apiTestDb1_pregresso", [], controller.apiTestDb1_pregresso); // [middleware.checkToken],
 router.get("/1/apiTestDb2_secondary", [], controller.apiTestDb2_secondary); // [middleware.checkToken],
-router.get("/1/apiTestDb2_secondary_2", [], controller.apiTestDb2_secondary); // [middleware.checkToken],
+router.get("/1/apiTestDb2_secondary_B", [], controller.apiTestDb2_secondaryB); // [middleware.checkToken],
 
 export { router };
