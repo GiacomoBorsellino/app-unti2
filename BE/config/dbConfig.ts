@@ -33,7 +33,7 @@ const db_data = {
   ],
 };
 
-const db_catasto_pool = new Pool({
+const db_secondary_pool = new Pool({
   user: process.env.DATABASE_USERNAME_2,
   host: process.env.DATABASE_HOST_2,
   database: process.env.DATABASE_NAME_2,
@@ -43,7 +43,7 @@ const db_catasto_pool = new Pool({
 
 const db = {
   main_config: db_data,
-  secondary_config: db_catasto_pool,
+  secondary_config: db_secondary_pool,
   main: client_main,
   secondary: client_secondary,
 };

@@ -17,7 +17,7 @@ export const apiTestDb1_pregresso = async (req: Request, res: Response) => {
   });
 };
 
-export const apiTestDb2_catasto = async (req: Request, res: Response) => {
+export const apiTestDb2_secondary = async (req: Request, res: Response) => {
   console.log("Sono nel Controller apiTest apiTestDb2_");
   await db.main.document
     .findFirst()
