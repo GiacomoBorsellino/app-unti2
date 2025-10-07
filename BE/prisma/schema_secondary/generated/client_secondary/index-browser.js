@@ -120,7 +120,7 @@ exports.Prisma.TransactionIsolationLevel = makeStrictEnum({
   Serializable: 'Serializable'
 });
 
-exports.Prisma.Test_table_secondaryScalarFieldEnum = {
+exports.Prisma.Table_secondaryScalarFieldEnum = {
   id: 'id',
   name: 'name',
   del: 'del',
@@ -144,7 +144,7 @@ exports.Prisma.NullsOrder = {
 
 
 exports.Prisma.ModelName = {
-  test_table_secondary: 'test_table_secondary'
+  table_secondary: 'table_secondary'
 };
 
 /**

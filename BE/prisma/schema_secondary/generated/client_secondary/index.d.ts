@@ -14,10 +14,10 @@ export type PrismaPromise<T> = $Public.PrismaPromise<T>
 
 
 /**
- * Model test_table_secondary
+ * Model table_secondary
  * 
  */
-export type test_table_secondary = $Result.DefaultSelection<Prisma.$test_table_secondaryPayload>
+export type table_secondary = $Result.DefaultSelection<Prisma.$table_secondaryPayload>
 
 /**
  * ##  Prisma Client ʲˢ
@@ -26,8 +26,8 @@ export type test_table_secondary = $Result.DefaultSelection<Prisma.$test_table_s
  * @example
  * ```
  * const prisma = new PrismaClient()
- * // Fetch zero or more Test_table_secondaries
- * const test_table_secondaries = await prisma.test_table_secondary.findMany()
+ * // Fetch zero or more Table_secondaries
+ * const table_secondaries = await prisma.table_secondary.findMany()
  * ```
  *
  *
@@ -47,8 +47,8 @@ export class PrismaClient<
    * @example
    * ```
    * const prisma = new PrismaClient()
-   * // Fetch zero or more Test_table_secondaries
-   * const test_table_secondaries = await prisma.test_table_secondary.findMany()
+   * // Fetch zero or more Table_secondaries
+   * const table_secondaries = await prisma.table_secondary.findMany()
    * ```
    *
    *
@@ -138,14 +138,14 @@ export class PrismaClient<
   }>>
 
       /**
-   * `prisma.test_table_secondary`: Exposes CRUD operations for the **test_table_secondary** model.
+   * `prisma.table_secondary`: Exposes CRUD operations for the **table_secondary** model.
     * Example usage:
     * ```ts
-    * // Fetch zero or more Test_table_secondaries
-    * const test_table_secondaries = await prisma.test_table_secondary.findMany()
+    * // Fetch zero or more Table_secondaries
+    * const table_secondaries = await prisma.table_secondary.findMany()
     * ```
     */
-  get test_table_secondary(): Prisma.test_table_secondaryDelegate<ExtArgs, ClientOptions>;
+  get table_secondary(): Prisma.table_secondaryDelegate<ExtArgs, ClientOptions>;
 }
 
 export namespace Prisma {
@@ -586,7 +586,7 @@ export namespace Prisma {
 
 
   export const ModelName: {
-    test_table_secondary: 'test_table_secondary'
+    table_secondary: 'table_secondary'
   };
 
   export type ModelName = (typeof ModelName)[keyof typeof ModelName]
@@ -605,81 +605,81 @@ export namespace Prisma {
       omit: GlobalOmitOptions
     }
     meta: {
-      modelProps: "test_table_secondary"
+      modelProps: "table_secondary"
       txIsolationLevel: Prisma.TransactionIsolationLevel
     }
     model: {
-      test_table_secondary: {
-        payload: Prisma.$test_table_secondaryPayload<ExtArgs>
-        fields: Prisma.test_table_secondaryFieldRefs
+      table_secondary: {
+        payload: Prisma.$table_secondaryPayload<ExtArgs>
+        fields: Prisma.table_secondaryFieldRefs
         operations: {
           findUnique: {
-            args: Prisma.test_table_secondaryFindUniqueArgs<ExtArgs>
-            result: $Utils.PayloadToResult<Prisma.$test_table_secondaryPayload> | null
+            args: Prisma.table_secondaryFindUniqueArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$table_secondaryPayload> | null
           }
           findUniqueOrThrow: {
-            args: Prisma.test_table_secondaryFindUniqueOrThrowArgs<ExtArgs>
-            result: $Utils.PayloadToResult<Prisma.$test_table_secondaryPayload>
+            args: Prisma.table_secondaryFindUniqueOrThrowArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$table_secondaryPayload>
           }
           findFirst: {
-            args: Prisma.test_table_secondaryFindFirstArgs<ExtArgs>
-            result: $Utils.PayloadToResult<Prisma.$test_table_secondaryPayload> | null
+            args: Prisma.table_secondaryFindFirstArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$table_secondaryPayload> | null
           }
           findFirstOrThrow: {
-            args: Prisma.test_table_secondaryFindFirstOrThrowArgs<ExtArgs>
-            result: $Utils.PayloadToResult<Prisma.$test_table_secondaryPayload>
+            args: Prisma.table_secondaryFindFirstOrThrowArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$table_secondaryPayload>
           }
           findMany: {
-            args: Prisma.test_table_secondaryFindManyArgs<ExtArgs>
-            result: $Utils.PayloadToResult<Prisma.$test_table_secondaryPayload>[]
+            args: Prisma.table_secondaryFindManyArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$table_secondaryPayload>[]
           }
           create: {
-            args: Prisma.test_table_secondaryCreateArgs<ExtArgs>
-            result: $Utils.PayloadToResult<Prisma.$test_table_secondaryPayload>
+            args: Prisma.table_secondaryCreateArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$table_secondaryPayload>
           }
           createMany: {
-            args: Prisma.test_table_secondaryCreateManyArgs<ExtArgs>
+            args: Prisma.table_secondaryCreateManyArgs<ExtArgs>
             result: BatchPayload
           }
           createManyAndReturn: {
-            args: Prisma.test_table_secondaryCreateManyAndReturnArgs<ExtArgs>
-            result: $Utils.PayloadToResult<Prisma.$test_table_secondaryPayload>[]
+            args: Prisma.table_secondaryCreateManyAndReturnArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$table_secondaryPayload>[]
           }
           delete: {
-            args: Prisma.test_table_secondaryDeleteArgs<ExtArgs>
-            result: $Utils.PayloadToResult<Prisma.$test_table_secondaryPayload>
+            args: Prisma.table_secondaryDeleteArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$table_secondaryPayload>
           }
           update: {
-            args: Prisma.test_table_secondaryUpdateArgs<ExtArgs>
-            result: $Utils.PayloadToResult<Prisma.$test_table_secondaryPayload>
+            args: Prisma.table_secondaryUpdateArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$table_secondaryPayload>
           }
           deleteMany: {
-            args: Prisma.test_table_secondaryDeleteManyArgs<ExtArgs>
+            args: Prisma.table_secondaryDeleteManyArgs<ExtArgs>
             result: BatchPayload
           }
           updateMany: {
-            args: Prisma.test_table_secondaryUpdateManyArgs<ExtArgs>
+            args: Prisma.table_secondaryUpdateManyArgs<ExtArgs>
             result: BatchPayload
           }
           updateManyAndReturn: {
-            args: Prisma.test_table_secondaryUpdateManyAndReturnArgs<ExtArgs>
-            result: $Utils.PayloadToResult<Prisma.$test_table_secondaryPayload>[]
+            args: Prisma.table_secondaryUpdateManyAndReturnArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$table_secondaryPayload>[]
           }
           upsert: {
-            args: Prisma.test_table_secondaryUpsertArgs<ExtArgs>
-            result: $Utils.PayloadToResult<Prisma.$test_table_secondaryPayload>
+            args: Prisma.table_secondaryUpsertArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$table_secondaryPayload>
           }
           aggregate: {
-            args: Prisma.Test_table_secondaryAggregateArgs<ExtArgs>
-            result: $Utils.Optional<AggregateTest_table_secondary>
+            args: Prisma.Table_secondaryAggregateArgs<ExtArgs>
+            result: $Utils.Optional<AggregateTable_secondary>
           }
           groupBy: {
-            args: Prisma.test_table_secondaryGroupByArgs<ExtArgs>
-            result: $Utils.Optional<Test_table_secondaryGroupByOutputType>[]
+            args: Prisma.table_secondaryGroupByArgs<ExtArgs>
+            result: $Utils.Optional<Table_secondaryGroupByOutputType>[]
           }
           count: {
-            args: Prisma.test_table_secondaryCountArgs<ExtArgs>
-            result: $Utils.Optional<Test_table_secondaryCountAggregateOutputType> | number
+            args: Prisma.table_secondaryCountArgs<ExtArgs>
+            result: $Utils.Optional<Table_secondaryCountAggregateOutputType> | number
           }
         }
       }
@@ -779,7 +779,7 @@ export namespace Prisma {
     omit?: Prisma.GlobalOmitConfig
   }
   export type GlobalOmitConfig = {
-    test_table_secondary?: test_table_secondaryOmit
+    table_secondary?: table_secondaryOmit
   }
 
   /* Types for Logging */
@@ -861,42 +861,42 @@ export namespace Prisma {
    */
 
   /**
-   * Model test_table_secondary
+   * Model table_secondary
    */
 
-  export type AggregateTest_table_secondary = {
-    _count: Test_table_secondaryCountAggregateOutputType | null
-    _avg: Test_table_secondaryAvgAggregateOutputType | null
-    _sum: Test_table_secondarySumAggregateOutputType | null
-    _min: Test_table_secondaryMinAggregateOutputType | null
-    _max: Test_table_secondaryMaxAggregateOutputType | null
+  export type AggregateTable_secondary = {
+    _count: Table_secondaryCountAggregateOutputType | null
+    _avg: Table_secondaryAvgAggregateOutputType | null
+    _sum: Table_secondarySumAggregateOutputType | null
+    _min: Table_secondaryMinAggregateOutputType | null
+    _max: Table_secondaryMaxAggregateOutputType | null
   }
 
-  export type Test_table_secondaryAvgAggregateOutputType = {
+  export type Table_secondaryAvgAggregateOutputType = {
     id: number | null
     field_3: number | null
   }
 
-  export type Test_table_secondarySumAggregateOutputType = {
+  export type Table_secondarySumAggregateOutputType = {
     id: number | null
     field_3: number | null
   }
 
-  export type Test_table_secondaryMinAggregateOutputType = {
-    id: number | null
-    name: string | null
-    del: boolean | null
-    field_3: number | null
-  }
-
-  export type Test_table_secondaryMaxAggregateOutputType = {
+  export type Table_secondaryMinAggregateOutputType = {
     id: number | null
     name: string | null
     del: boolean | null
     field_3: number | null
   }
 
-  export type Test_table_secondaryCountAggregateOutputType = {
+  export type Table_secondaryMaxAggregateOutputType = {
+    id: number | null
+    name: string | null
+    del: boolean | null
+    field_3: number | null
+  }
+
+  export type Table_secondaryCountAggregateOutputType = {
     id: number
     name: number
     del: number
@@ -905,31 +905,31 @@ export namespace Prisma {
   }
 
 
-  export type Test_table_secondaryAvgAggregateInputType = {
+  export type Table_secondaryAvgAggregateInputType = {
     id?: true
     field_3?: true
   }
 
-  export type Test_table_secondarySumAggregateInputType = {
+  export type Table_secondarySumAggregateInputType = {
     id?: true
     field_3?: true
   }
 
-  export type Test_table_secondaryMinAggregateInputType = {
-    id?: true
-    name?: true
-    del?: true
-    field_3?: true
-  }
-
-  export type Test_table_secondaryMaxAggregateInputType = {
+  export type Table_secondaryMinAggregateInputType = {
     id?: true
     name?: true
     del?: true
     field_3?: true
   }
 
-  export type Test_table_secondaryCountAggregateInputType = {
+  export type Table_secondaryMaxAggregateInputType = {
+    id?: true
+    name?: true
+    del?: true
+    field_3?: true
+  }
+
+  export type Table_secondaryCountAggregateInputType = {
     id?: true
     name?: true
     del?: true
@@ -937,286 +937,286 @@ export namespace Prisma {
     _all?: true
   }
 
-  export type Test_table_secondaryAggregateArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type Table_secondaryAggregateArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * Filter which test_table_secondary to aggregate.
+     * Filter which table_secondary to aggregate.
      */
-    where?: test_table_secondaryWhereInput
+    where?: table_secondaryWhereInput
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/sorting Sorting Docs}
      * 
-     * Determine the order of test_table_secondaries to fetch.
+     * Determine the order of table_secondaries to fetch.
      */
-    orderBy?: test_table_secondaryOrderByWithRelationInput | test_table_secondaryOrderByWithRelationInput[]
+    orderBy?: table_secondaryOrderByWithRelationInput | table_secondaryOrderByWithRelationInput[]
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination#cursor-based-pagination Cursor Docs}
      * 
      * Sets the start position
      */
-    cursor?: test_table_secondaryWhereUniqueInput
+    cursor?: table_secondaryWhereUniqueInput
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
      * 
-     * Take `±n` test_table_secondaries from the position of the cursor.
+     * Take `±n` table_secondaries from the position of the cursor.
      */
     take?: number
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
      * 
-     * Skip the first `n` test_table_secondaries.
+     * Skip the first `n` table_secondaries.
      */
     skip?: number
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/aggregations Aggregation Docs}
      * 
-     * Count returned test_table_secondaries
+     * Count returned table_secondaries
     **/
-    _count?: true | Test_table_secondaryCountAggregateInputType
+    _count?: true | Table_secondaryCountAggregateInputType
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/aggregations Aggregation Docs}
      * 
      * Select which fields to average
     **/
-    _avg?: Test_table_secondaryAvgAggregateInputType
+    _avg?: Table_secondaryAvgAggregateInputType
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/aggregations Aggregation Docs}
      * 
      * Select which fields to sum
     **/
-    _sum?: Test_table_secondarySumAggregateInputType
+    _sum?: Table_secondarySumAggregateInputType
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/aggregations Aggregation Docs}
      * 
      * Select which fields to find the minimum value
     **/
-    _min?: Test_table_secondaryMinAggregateInputType
+    _min?: Table_secondaryMinAggregateInputType
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/aggregations Aggregation Docs}
      * 
      * Select which fields to find the maximum value
     **/
-    _max?: Test_table_secondaryMaxAggregateInputType
+    _max?: Table_secondaryMaxAggregateInputType
   }
 
-  export type GetTest_table_secondaryAggregateType<T extends Test_table_secondaryAggregateArgs> = {
-        [P in keyof T & keyof AggregateTest_table_secondary]: P extends '_count' | 'count'
+  export type GetTable_secondaryAggregateType<T extends Table_secondaryAggregateArgs> = {
+        [P in keyof T & keyof AggregateTable_secondary]: P extends '_count' | 'count'
       ? T[P] extends true
         ? number
-        : GetScalarType<T[P], AggregateTest_table_secondary[P]>
-      : GetScalarType<T[P], AggregateTest_table_secondary[P]>
+        : GetScalarType<T[P], AggregateTable_secondary[P]>
+      : GetScalarType<T[P], AggregateTable_secondary[P]>
   }
 
 
 
 
-  export type test_table_secondaryGroupByArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
-    where?: test_table_secondaryWhereInput
-    orderBy?: test_table_secondaryOrderByWithAggregationInput | test_table_secondaryOrderByWithAggregationInput[]
-    by: Test_table_secondaryScalarFieldEnum[] | Test_table_secondaryScalarFieldEnum
-    having?: test_table_secondaryScalarWhereWithAggregatesInput
+  export type table_secondaryGroupByArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    where?: table_secondaryWhereInput
+    orderBy?: table_secondaryOrderByWithAggregationInput | table_secondaryOrderByWithAggregationInput[]
+    by: Table_secondaryScalarFieldEnum[] | Table_secondaryScalarFieldEnum
+    having?: table_secondaryScalarWhereWithAggregatesInput
     take?: number
     skip?: number
-    _count?: Test_table_secondaryCountAggregateInputType | true
-    _avg?: Test_table_secondaryAvgAggregateInputType
-    _sum?: Test_table_secondarySumAggregateInputType
-    _min?: Test_table_secondaryMinAggregateInputType
-    _max?: Test_table_secondaryMaxAggregateInputType
+    _count?: Table_secondaryCountAggregateInputType | true
+    _avg?: Table_secondaryAvgAggregateInputType
+    _sum?: Table_secondarySumAggregateInputType
+    _min?: Table_secondaryMinAggregateInputType
+    _max?: Table_secondaryMaxAggregateInputType
   }
 
-  export type Test_table_secondaryGroupByOutputType = {
+  export type Table_secondaryGroupByOutputType = {
     id: number
     name: string | null
     del: boolean
     field_3: number
-    _count: Test_table_secondaryCountAggregateOutputType | null
-    _avg: Test_table_secondaryAvgAggregateOutputType | null
-    _sum: Test_table_secondarySumAggregateOutputType | null
-    _min: Test_table_secondaryMinAggregateOutputType | null
-    _max: Test_table_secondaryMaxAggregateOutputType | null
+    _count: Table_secondaryCountAggregateOutputType | null
+    _avg: Table_secondaryAvgAggregateOutputType | null
+    _sum: Table_secondarySumAggregateOutputType | null
+    _min: Table_secondaryMinAggregateOutputType | null
+    _max: Table_secondaryMaxAggregateOutputType | null
   }
 
-  type GetTest_table_secondaryGroupByPayload<T extends test_table_secondaryGroupByArgs> = Prisma.PrismaPromise<
+  type GetTable_secondaryGroupByPayload<T extends table_secondaryGroupByArgs> = Prisma.PrismaPromise<
     Array<
-      PickEnumerable<Test_table_secondaryGroupByOutputType, T['by']> &
+      PickEnumerable<Table_secondaryGroupByOutputType, T['by']> &
         {
-          [P in ((keyof T) & (keyof Test_table_secondaryGroupByOutputType))]: P extends '_count'
+          [P in ((keyof T) & (keyof Table_secondaryGroupByOutputType))]: P extends '_count'
             ? T[P] extends boolean
               ? number
-              : GetScalarType<T[P], Test_table_secondaryGroupByOutputType[P]>
-            : GetScalarType<T[P], Test_table_secondaryGroupByOutputType[P]>
+              : GetScalarType<T[P], Table_secondaryGroupByOutputType[P]>
+            : GetScalarType<T[P], Table_secondaryGroupByOutputType[P]>
         }
       >
     >
 
 
-  export type test_table_secondarySelect<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetSelect<{
+  export type table_secondarySelect<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetSelect<{
     id?: boolean
     name?: boolean
     del?: boolean
     field_3?: boolean
-  }, ExtArgs["result"]["test_table_secondary"]>
+  }, ExtArgs["result"]["table_secondary"]>
 
-  export type test_table_secondarySelectCreateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetSelect<{
+  export type table_secondarySelectCreateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetSelect<{
     id?: boolean
     name?: boolean
     del?: boolean
     field_3?: boolean
-  }, ExtArgs["result"]["test_table_secondary"]>
+  }, ExtArgs["result"]["table_secondary"]>
 
-  export type test_table_secondarySelectUpdateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetSelect<{
+  export type table_secondarySelectUpdateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetSelect<{
     id?: boolean
     name?: boolean
     del?: boolean
     field_3?: boolean
-  }, ExtArgs["result"]["test_table_secondary"]>
+  }, ExtArgs["result"]["table_secondary"]>
 
-  export type test_table_secondarySelectScalar = {
+  export type table_secondarySelectScalar = {
     id?: boolean
     name?: boolean
     del?: boolean
     field_3?: boolean
   }
 
-  export type test_table_secondaryOmit<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetOmit<"id" | "name" | "del" | "field_3", ExtArgs["result"]["test_table_secondary"]>
+  export type table_secondaryOmit<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetOmit<"id" | "name" | "del" | "field_3", ExtArgs["result"]["table_secondary"]>
 
-  export type $test_table_secondaryPayload<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
-    name: "test_table_secondary"
+  export type $table_secondaryPayload<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    name: "table_secondary"
     objects: {}
     scalars: $Extensions.GetPayloadResult<{
       id: number
       name: string | null
       del: boolean
       field_3: number
-    }, ExtArgs["result"]["test_table_secondary"]>
+    }, ExtArgs["result"]["table_secondary"]>
     composites: {}
   }
 
-  type test_table_secondaryGetPayload<S extends boolean | null | undefined | test_table_secondaryDefaultArgs> = $Result.GetResult<Prisma.$test_table_secondaryPayload, S>
+  type table_secondaryGetPayload<S extends boolean | null | undefined | table_secondaryDefaultArgs> = $Result.GetResult<Prisma.$table_secondaryPayload, S>
 
-  type test_table_secondaryCountArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> =
-    Omit<test_table_secondaryFindManyArgs, 'select' | 'include' | 'distinct' | 'omit'> & {
-      select?: Test_table_secondaryCountAggregateInputType | true
+  type table_secondaryCountArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> =
+    Omit<table_secondaryFindManyArgs, 'select' | 'include' | 'distinct' | 'omit'> & {
+      select?: Table_secondaryCountAggregateInputType | true
     }
 
-  export interface test_table_secondaryDelegate<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs, GlobalOmitOptions = {}> {
-    [K: symbol]: { types: Prisma.TypeMap<ExtArgs>['model']['test_table_secondary'], meta: { name: 'test_table_secondary' } }
+  export interface table_secondaryDelegate<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs, GlobalOmitOptions = {}> {
+    [K: symbol]: { types: Prisma.TypeMap<ExtArgs>['model']['table_secondary'], meta: { name: 'table_secondary' } }
     /**
-     * Find zero or one Test_table_secondary that matches the filter.
-     * @param {test_table_secondaryFindUniqueArgs} args - Arguments to find a Test_table_secondary
+     * Find zero or one Table_secondary that matches the filter.
+     * @param {table_secondaryFindUniqueArgs} args - Arguments to find a Table_secondary
      * @example
-     * // Get one Test_table_secondary
-     * const test_table_secondary = await prisma.test_table_secondary.findUnique({
+     * // Get one Table_secondary
+     * const table_secondary = await prisma.table_secondary.findUnique({
      *   where: {
      *     // ... provide filter here
      *   }
      * })
      */
-    findUnique<T extends test_table_secondaryFindUniqueArgs>(args: SelectSubset<T, test_table_secondaryFindUniqueArgs<ExtArgs>>): Prisma__test_table_secondaryClient<$Result.GetResult<Prisma.$test_table_secondaryPayload<ExtArgs>, T, "findUnique", GlobalOmitOptions> | null, null, ExtArgs, GlobalOmitOptions>
+    findUnique<T extends table_secondaryFindUniqueArgs>(args: SelectSubset<T, table_secondaryFindUniqueArgs<ExtArgs>>): Prisma__table_secondaryClient<$Result.GetResult<Prisma.$table_secondaryPayload<ExtArgs>, T, "findUnique", GlobalOmitOptions> | null, null, ExtArgs, GlobalOmitOptions>
 
     /**
-     * Find one Test_table_secondary that matches the filter or throw an error with `error.code='P2025'`
+     * Find one Table_secondary that matches the filter or throw an error with `error.code='P2025'`
      * if no matches were found.
-     * @param {test_table_secondaryFindUniqueOrThrowArgs} args - Arguments to find a Test_table_secondary
+     * @param {table_secondaryFindUniqueOrThrowArgs} args - Arguments to find a Table_secondary
      * @example
-     * // Get one Test_table_secondary
-     * const test_table_secondary = await prisma.test_table_secondary.findUniqueOrThrow({
+     * // Get one Table_secondary
+     * const table_secondary = await prisma.table_secondary.findUniqueOrThrow({
      *   where: {
      *     // ... provide filter here
      *   }
      * })
      */
-    findUniqueOrThrow<T extends test_table_secondaryFindUniqueOrThrowArgs>(args: SelectSubset<T, test_table_secondaryFindUniqueOrThrowArgs<ExtArgs>>): Prisma__test_table_secondaryClient<$Result.GetResult<Prisma.$test_table_secondaryPayload<ExtArgs>, T, "findUniqueOrThrow", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
+    findUniqueOrThrow<T extends table_secondaryFindUniqueOrThrowArgs>(args: SelectSubset<T, table_secondaryFindUniqueOrThrowArgs<ExtArgs>>): Prisma__table_secondaryClient<$Result.GetResult<Prisma.$table_secondaryPayload<ExtArgs>, T, "findUniqueOrThrow", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
 
     /**
-     * Find the first Test_table_secondary that matches the filter.
+     * Find the first Table_secondary that matches the filter.
      * Note, that providing `undefined` is treated as the value not being there.
      * Read more here: https://pris.ly/d/null-undefined
-     * @param {test_table_secondaryFindFirstArgs} args - Arguments to find a Test_table_secondary
+     * @param {table_secondaryFindFirstArgs} args - Arguments to find a Table_secondary
      * @example
-     * // Get one Test_table_secondary
-     * const test_table_secondary = await prisma.test_table_secondary.findFirst({
+     * // Get one Table_secondary
+     * const table_secondary = await prisma.table_secondary.findFirst({
      *   where: {
      *     // ... provide filter here
      *   }
      * })
      */
-    findFirst<T extends test_table_secondaryFindFirstArgs>(args?: SelectSubset<T, test_table_secondaryFindFirstArgs<ExtArgs>>): Prisma__test_table_secondaryClient<$Result.GetResult<Prisma.$test_table_secondaryPayload<ExtArgs>, T, "findFirst", GlobalOmitOptions> | null, null, ExtArgs, GlobalOmitOptions>
+    findFirst<T extends table_secondaryFindFirstArgs>(args?: SelectSubset<T, table_secondaryFindFirstArgs<ExtArgs>>): Prisma__table_secondaryClient<$Result.GetResult<Prisma.$table_secondaryPayload<ExtArgs>, T, "findFirst", GlobalOmitOptions> | null, null, ExtArgs, GlobalOmitOptions>
 
     /**
-     * Find the first Test_table_secondary that matches the filter or
+     * Find the first Table_secondary that matches the filter or
      * throw `PrismaKnownClientError` with `P2025` code if no matches were found.
      * Note, that providing `undefined` is treated as the value not being there.
      * Read more here: https://pris.ly/d/null-undefined
-     * @param {test_table_secondaryFindFirstOrThrowArgs} args - Arguments to find a Test_table_secondary
+     * @param {table_secondaryFindFirstOrThrowArgs} args - Arguments to find a Table_secondary
      * @example
-     * // Get one Test_table_secondary
-     * const test_table_secondary = await prisma.test_table_secondary.findFirstOrThrow({
+     * // Get one Table_secondary
+     * const table_secondary = await prisma.table_secondary.findFirstOrThrow({
      *   where: {
      *     // ... provide filter here
      *   }
      * })
      */
-    findFirstOrThrow<T extends test_table_secondaryFindFirstOrThrowArgs>(args?: SelectSubset<T, test_table_secondaryFindFirstOrThrowArgs<ExtArgs>>): Prisma__test_table_secondaryClient<$Result.GetResult<Prisma.$test_table_secondaryPayload<ExtArgs>, T, "findFirstOrThrow", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
+    findFirstOrThrow<T extends table_secondaryFindFirstOrThrowArgs>(args?: SelectSubset<T, table_secondaryFindFirstOrThrowArgs<ExtArgs>>): Prisma__table_secondaryClient<$Result.GetResult<Prisma.$table_secondaryPayload<ExtArgs>, T, "findFirstOrThrow", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
 
     /**
-     * Find zero or more Test_table_secondaries that matches the filter.
+     * Find zero or more Table_secondaries that matches the filter.
      * Note, that providing `undefined` is treated as the value not being there.
      * Read more here: https://pris.ly/d/null-undefined
-     * @param {test_table_secondaryFindManyArgs} args - Arguments to filter and select certain fields only.
+     * @param {table_secondaryFindManyArgs} args - Arguments to filter and select certain fields only.
      * @example
-     * // Get all Test_table_secondaries
-     * const test_table_secondaries = await prisma.test_table_secondary.findMany()
+     * // Get all Table_secondaries
+     * const table_secondaries = await prisma.table_secondary.findMany()
      * 
-     * // Get first 10 Test_table_secondaries
-     * const test_table_secondaries = await prisma.test_table_secondary.findMany({ take: 10 })
+     * // Get first 10 Table_secondaries
+     * const table_secondaries = await prisma.table_secondary.findMany({ take: 10 })
      * 
      * // Only select the `id`
-     * const test_table_secondaryWithIdOnly = await prisma.test_table_secondary.findMany({ select: { id: true } })
+     * const table_secondaryWithIdOnly = await prisma.table_secondary.findMany({ select: { id: true } })
      * 
      */
-    findMany<T extends test_table_secondaryFindManyArgs>(args?: SelectSubset<T, test_table_secondaryFindManyArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$test_table_secondaryPayload<ExtArgs>, T, "findMany", GlobalOmitOptions>>
+    findMany<T extends table_secondaryFindManyArgs>(args?: SelectSubset<T, table_secondaryFindManyArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$table_secondaryPayload<ExtArgs>, T, "findMany", GlobalOmitOptions>>
 
     /**
-     * Create a Test_table_secondary.
-     * @param {test_table_secondaryCreateArgs} args - Arguments to create a Test_table_secondary.
+     * Create a Table_secondary.
+     * @param {table_secondaryCreateArgs} args - Arguments to create a Table_secondary.
      * @example
-     * // Create one Test_table_secondary
-     * const Test_table_secondary = await prisma.test_table_secondary.create({
+     * // Create one Table_secondary
+     * const Table_secondary = await prisma.table_secondary.create({
      *   data: {
-     *     // ... data to create a Test_table_secondary
+     *     // ... data to create a Table_secondary
      *   }
      * })
      * 
      */
-    create<T extends test_table_secondaryCreateArgs>(args: SelectSubset<T, test_table_secondaryCreateArgs<ExtArgs>>): Prisma__test_table_secondaryClient<$Result.GetResult<Prisma.$test_table_secondaryPayload<ExtArgs>, T, "create", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
+    create<T extends table_secondaryCreateArgs>(args: SelectSubset<T, table_secondaryCreateArgs<ExtArgs>>): Prisma__table_secondaryClient<$Result.GetResult<Prisma.$table_secondaryPayload<ExtArgs>, T, "create", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
 
     /**
-     * Create many Test_table_secondaries.
-     * @param {test_table_secondaryCreateManyArgs} args - Arguments to create many Test_table_secondaries.
+     * Create many Table_secondaries.
+     * @param {table_secondaryCreateManyArgs} args - Arguments to create many Table_secondaries.
      * @example
-     * // Create many Test_table_secondaries
-     * const test_table_secondary = await prisma.test_table_secondary.createMany({
+     * // Create many Table_secondaries
+     * const table_secondary = await prisma.table_secondary.createMany({
      *   data: [
      *     // ... provide data here
      *   ]
      * })
      *     
      */
-    createMany<T extends test_table_secondaryCreateManyArgs>(args?: SelectSubset<T, test_table_secondaryCreateManyArgs<ExtArgs>>): Prisma.PrismaPromise<BatchPayload>
+    createMany<T extends table_secondaryCreateManyArgs>(args?: SelectSubset<T, table_secondaryCreateManyArgs<ExtArgs>>): Prisma.PrismaPromise<BatchPayload>
 
     /**
-     * Create many Test_table_secondaries and returns the data saved in the database.
-     * @param {test_table_secondaryCreateManyAndReturnArgs} args - Arguments to create many Test_table_secondaries.
+     * Create many Table_secondaries and returns the data saved in the database.
+     * @param {table_secondaryCreateManyAndReturnArgs} args - Arguments to create many Table_secondaries.
      * @example
-     * // Create many Test_table_secondaries
-     * const test_table_secondary = await prisma.test_table_secondary.createManyAndReturn({
+     * // Create many Table_secondaries
+     * const table_secondary = await prisma.table_secondary.createManyAndReturn({
      *   data: [
      *     // ... provide data here
      *   ]
      * })
      * 
-     * // Create many Test_table_secondaries and only return the `id`
-     * const test_table_secondaryWithIdOnly = await prisma.test_table_secondary.createManyAndReturn({
+     * // Create many Table_secondaries and only return the `id`
+     * const table_secondaryWithIdOnly = await prisma.table_secondary.createManyAndReturn({
      *   select: { id: true },
      *   data: [
      *     // ... provide data here
@@ -1226,28 +1226,28 @@ export namespace Prisma {
      * Read more here: https://pris.ly/d/null-undefined
      * 
      */
-    createManyAndReturn<T extends test_table_secondaryCreateManyAndReturnArgs>(args?: SelectSubset<T, test_table_secondaryCreateManyAndReturnArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$test_table_secondaryPayload<ExtArgs>, T, "createManyAndReturn", GlobalOmitOptions>>
+    createManyAndReturn<T extends table_secondaryCreateManyAndReturnArgs>(args?: SelectSubset<T, table_secondaryCreateManyAndReturnArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$table_secondaryPayload<ExtArgs>, T, "createManyAndReturn", GlobalOmitOptions>>
 
     /**
-     * Delete a Test_table_secondary.
-     * @param {test_table_secondaryDeleteArgs} args - Arguments to delete one Test_table_secondary.
+     * Delete a Table_secondary.
+     * @param {table_secondaryDeleteArgs} args - Arguments to delete one Table_secondary.
      * @example
-     * // Delete one Test_table_secondary
-     * const Test_table_secondary = await prisma.test_table_secondary.delete({
+     * // Delete one Table_secondary
+     * const Table_secondary = await prisma.table_secondary.delete({
      *   where: {
-     *     // ... filter to delete one Test_table_secondary
+     *     // ... filter to delete one Table_secondary
      *   }
      * })
      * 
      */
-    delete<T extends test_table_secondaryDeleteArgs>(args: SelectSubset<T, test_table_secondaryDeleteArgs<ExtArgs>>): Prisma__test_table_secondaryClient<$Result.GetResult<Prisma.$test_table_secondaryPayload<ExtArgs>, T, "delete", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
+    delete<T extends table_secondaryDeleteArgs>(args: SelectSubset<T, table_secondaryDeleteArgs<ExtArgs>>): Prisma__table_secondaryClient<$Result.GetResult<Prisma.$table_secondaryPayload<ExtArgs>, T, "delete", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
 
     /**
-     * Update one Test_table_secondary.
-     * @param {test_table_secondaryUpdateArgs} args - Arguments to update one Test_table_secondary.
+     * Update one Table_secondary.
+     * @param {table_secondaryUpdateArgs} args - Arguments to update one Table_secondary.
      * @example
-     * // Update one Test_table_secondary
-     * const test_table_secondary = await prisma.test_table_secondary.update({
+     * // Update one Table_secondary
+     * const table_secondary = await prisma.table_secondary.update({
      *   where: {
      *     // ... provide filter here
      *   },
@@ -1257,30 +1257,30 @@ export namespace Prisma {
      * })
      * 
      */
-    update<T extends test_table_secondaryUpdateArgs>(args: SelectSubset<T, test_table_secondaryUpdateArgs<ExtArgs>>): Prisma__test_table_secondaryClient<$Result.GetResult<Prisma.$test_table_secondaryPayload<ExtArgs>, T, "update", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
+    update<T extends table_secondaryUpdateArgs>(args: SelectSubset<T, table_secondaryUpdateArgs<ExtArgs>>): Prisma__table_secondaryClient<$Result.GetResult<Prisma.$table_secondaryPayload<ExtArgs>, T, "update", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
 
     /**
-     * Delete zero or more Test_table_secondaries.
-     * @param {test_table_secondaryDeleteManyArgs} args - Arguments to filter Test_table_secondaries to delete.
+     * Delete zero or more Table_secondaries.
+     * @param {table_secondaryDeleteManyArgs} args - Arguments to filter Table_secondaries to delete.
      * @example
-     * // Delete a few Test_table_secondaries
-     * const { count } = await prisma.test_table_secondary.deleteMany({
+     * // Delete a few Table_secondaries
+     * const { count } = await prisma.table_secondary.deleteMany({
      *   where: {
      *     // ... provide filter here
      *   }
      * })
      * 
      */
-    deleteMany<T extends test_table_secondaryDeleteManyArgs>(args?: SelectSubset<T, test_table_secondaryDeleteManyArgs<ExtArgs>>): Prisma.PrismaPromise<BatchPayload>
+    deleteMany<T extends table_secondaryDeleteManyArgs>(args?: SelectSubset<T, table_secondaryDeleteManyArgs<ExtArgs>>): Prisma.PrismaPromise<BatchPayload>
 
     /**
-     * Update zero or more Test_table_secondaries.
+     * Update zero or more Table_secondaries.
      * Note, that providing `undefined` is treated as the value not being there.
      * Read more here: https://pris.ly/d/null-undefined
-     * @param {test_table_secondaryUpdateManyArgs} args - Arguments to update one or more rows.
+     * @param {table_secondaryUpdateManyArgs} args - Arguments to update one or more rows.
      * @example
-     * // Update many Test_table_secondaries
-     * const test_table_secondary = await prisma.test_table_secondary.updateMany({
+     * // Update many Table_secondaries
+     * const table_secondary = await prisma.table_secondary.updateMany({
      *   where: {
      *     // ... provide filter here
      *   },
@@ -1290,14 +1290,14 @@ export namespace Prisma {
      * })
      * 
      */
-    updateMany<T extends test_table_secondaryUpdateManyArgs>(args: SelectSubset<T, test_table_secondaryUpdateManyArgs<ExtArgs>>): Prisma.PrismaPromise<BatchPayload>
+    updateMany<T extends table_secondaryUpdateManyArgs>(args: SelectSubset<T, table_secondaryUpdateManyArgs<ExtArgs>>): Prisma.PrismaPromise<BatchPayload>
 
     /**
-     * Update zero or more Test_table_secondaries and returns the data updated in the database.
-     * @param {test_table_secondaryUpdateManyAndReturnArgs} args - Arguments to update many Test_table_secondaries.
+     * Update zero or more Table_secondaries and returns the data updated in the database.
+     * @param {table_secondaryUpdateManyAndReturnArgs} args - Arguments to update many Table_secondaries.
      * @example
-     * // Update many Test_table_secondaries
-     * const test_table_secondary = await prisma.test_table_secondary.updateManyAndReturn({
+     * // Update many Table_secondaries
+     * const table_secondary = await prisma.table_secondary.updateManyAndReturn({
      *   where: {
      *     // ... provide filter here
      *   },
@@ -1306,8 +1306,8 @@ export namespace Prisma {
      *   ]
      * })
      * 
-     * // Update zero or more Test_table_secondaries and only return the `id`
-     * const test_table_secondaryWithIdOnly = await prisma.test_table_secondary.updateManyAndReturn({
+     * // Update zero or more Table_secondaries and only return the `id`
+     * const table_secondaryWithIdOnly = await prisma.table_secondary.updateManyAndReturn({
      *   select: { id: true },
      *   where: {
      *     // ... provide filter here
@@ -1320,56 +1320,56 @@ export namespace Prisma {
      * Read more here: https://pris.ly/d/null-undefined
      * 
      */
-    updateManyAndReturn<T extends test_table_secondaryUpdateManyAndReturnArgs>(args: SelectSubset<T, test_table_secondaryUpdateManyAndReturnArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$test_table_secondaryPayload<ExtArgs>, T, "updateManyAndReturn", GlobalOmitOptions>>
+    updateManyAndReturn<T extends table_secondaryUpdateManyAndReturnArgs>(args: SelectSubset<T, table_secondaryUpdateManyAndReturnArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$table_secondaryPayload<ExtArgs>, T, "updateManyAndReturn", GlobalOmitOptions>>
 
     /**
-     * Create or update one Test_table_secondary.
-     * @param {test_table_secondaryUpsertArgs} args - Arguments to update or create a Test_table_secondary.
+     * Create or update one Table_secondary.
+     * @param {table_secondaryUpsertArgs} args - Arguments to update or create a Table_secondary.
      * @example
-     * // Update or create a Test_table_secondary
-     * const test_table_secondary = await prisma.test_table_secondary.upsert({
+     * // Update or create a Table_secondary
+     * const table_secondary = await prisma.table_secondary.upsert({
      *   create: {
-     *     // ... data to create a Test_table_secondary
+     *     // ... data to create a Table_secondary
      *   },
      *   update: {
      *     // ... in case it already exists, update
      *   },
      *   where: {
-     *     // ... the filter for the Test_table_secondary we want to update
+     *     // ... the filter for the Table_secondary we want to update
      *   }
      * })
      */
-    upsert<T extends test_table_secondaryUpsertArgs>(args: SelectSubset<T, test_table_secondaryUpsertArgs<ExtArgs>>): Prisma__test_table_secondaryClient<$Result.GetResult<Prisma.$test_table_secondaryPayload<ExtArgs>, T, "upsert", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
+    upsert<T extends table_secondaryUpsertArgs>(args: SelectSubset<T, table_secondaryUpsertArgs<ExtArgs>>): Prisma__table_secondaryClient<$Result.GetResult<Prisma.$table_secondaryPayload<ExtArgs>, T, "upsert", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
 
 
     /**
-     * Count the number of Test_table_secondaries.
+     * Count the number of Table_secondaries.
      * Note, that providing `undefined` is treated as the value not being there.
      * Read more here: https://pris.ly/d/null-undefined
-     * @param {test_table_secondaryCountArgs} args - Arguments to filter Test_table_secondaries to count.
+     * @param {table_secondaryCountArgs} args - Arguments to filter Table_secondaries to count.
      * @example
-     * // Count the number of Test_table_secondaries
-     * const count = await prisma.test_table_secondary.count({
+     * // Count the number of Table_secondaries
+     * const count = await prisma.table_secondary.count({
      *   where: {
-     *     // ... the filter for the Test_table_secondaries we want to count
+     *     // ... the filter for the Table_secondaries we want to count
      *   }
      * })
     **/
-    count<T extends test_table_secondaryCountArgs>(
-      args?: Subset<T, test_table_secondaryCountArgs>,
+    count<T extends table_secondaryCountArgs>(
+      args?: Subset<T, table_secondaryCountArgs>,
     ): Prisma.PrismaPromise<
       T extends $Utils.Record<'select', any>
         ? T['select'] extends true
           ? number
-          : GetScalarType<T['select'], Test_table_secondaryCountAggregateOutputType>
+          : GetScalarType<T['select'], Table_secondaryCountAggregateOutputType>
         : number
     >
 
     /**
-     * Allows you to perform aggregations operations on a Test_table_secondary.
+     * Allows you to perform aggregations operations on a Table_secondary.
      * Note, that providing `undefined` is treated as the value not being there.
      * Read more here: https://pris.ly/d/null-undefined
-     * @param {Test_table_secondaryAggregateArgs} args - Select which aggregations you would like to apply and on what fields.
+     * @param {Table_secondaryAggregateArgs} args - Select which aggregations you would like to apply and on what fields.
      * @example
      * // Ordered by age ascending
      * // Where email contains prisma.io
@@ -1389,13 +1389,13 @@ export namespace Prisma {
      *   take: 10,
      * })
     **/
-    aggregate<T extends Test_table_secondaryAggregateArgs>(args: Subset<T, Test_table_secondaryAggregateArgs>): Prisma.PrismaPromise<GetTest_table_secondaryAggregateType<T>>
+    aggregate<T extends Table_secondaryAggregateArgs>(args: Subset<T, Table_secondaryAggregateArgs>): Prisma.PrismaPromise<GetTable_secondaryAggregateType<T>>
 
     /**
-     * Group by Test_table_secondary.
+     * Group by Table_secondary.
      * Note, that providing `undefined` is treated as the value not being there.
      * Read more here: https://pris.ly/d/null-undefined
-     * @param {test_table_secondaryGroupByArgs} args - Group by arguments.
+     * @param {table_secondaryGroupByArgs} args - Group by arguments.
      * @example
      * // Group by city, order by createdAt, get count
      * const result = await prisma.user.groupBy({
@@ -1410,14 +1410,14 @@ export namespace Prisma {
      * 
     **/
     groupBy<
-      T extends test_table_secondaryGroupByArgs,
+      T extends table_secondaryGroupByArgs,
       HasSelectOrTake extends Or<
         Extends<'skip', Keys<T>>,
         Extends<'take', Keys<T>>
       >,
       OrderByArg extends True extends HasSelectOrTake
-        ? { orderBy: test_table_secondaryGroupByArgs['orderBy'] }
-        : { orderBy?: test_table_secondaryGroupByArgs['orderBy'] },
+        ? { orderBy: table_secondaryGroupByArgs['orderBy'] }
+        : { orderBy?: table_secondaryGroupByArgs['orderBy'] },
       OrderFields extends ExcludeUnderscoreKeys<Keys<MaybeTupleToUnion<T['orderBy']>>>,
       ByFields extends MaybeTupleToUnion<T['by']>,
       ByValid extends Has<ByFields, OrderFields>,
@@ -1466,20 +1466,20 @@ export namespace Prisma {
             ? never
             : `Error: Field "${P}" in "orderBy" needs to be provided in "by"`
         }[OrderFields]
-    >(args: SubsetIntersection<T, test_table_secondaryGroupByArgs, OrderByArg> & InputErrors): {} extends InputErrors ? GetTest_table_secondaryGroupByPayload<T> : Prisma.PrismaPromise<InputErrors>
+    >(args: SubsetIntersection<T, table_secondaryGroupByArgs, OrderByArg> & InputErrors): {} extends InputErrors ? GetTable_secondaryGroupByPayload<T> : Prisma.PrismaPromise<InputErrors>
   /**
-   * Fields of the test_table_secondary model
+   * Fields of the table_secondary model
    */
-  readonly fields: test_table_secondaryFieldRefs;
+  readonly fields: table_secondaryFieldRefs;
   }
 
   /**
-   * The delegate class that acts as a "Promise-like" for test_table_secondary.
+   * The delegate class that acts as a "Promise-like" for table_secondary.
    * Why is this prefixed with `Prisma__`?
    * Because we want to prevent naming conflicts as mentioned in
    * https://github.com/prisma/prisma-client-js/issues/707
    */
-  export interface Prisma__test_table_secondaryClient<T, Null = never, ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs, GlobalOmitOptions = {}> extends Prisma.PrismaPromise<T> {
+  export interface Prisma__table_secondaryClient<T, Null = never, ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs, GlobalOmitOptions = {}> extends Prisma.PrismaPromise<T> {
     readonly [Symbol.toStringTag]: "PrismaPromise"
     /**
      * Attaches callbacks for the resolution and/or rejection of the Promise.
@@ -1507,376 +1507,376 @@ export namespace Prisma {
 
 
   /**
-   * Fields of the test_table_secondary model
+   * Fields of the table_secondary model
    */
-  interface test_table_secondaryFieldRefs {
-    readonly id: FieldRef<"test_table_secondary", 'Int'>
-    readonly name: FieldRef<"test_table_secondary", 'String'>
-    readonly del: FieldRef<"test_table_secondary", 'Boolean'>
-    readonly field_3: FieldRef<"test_table_secondary", 'Int'>
+  interface table_secondaryFieldRefs {
+    readonly id: FieldRef<"table_secondary", 'Int'>
+    readonly name: FieldRef<"table_secondary", 'String'>
+    readonly del: FieldRef<"table_secondary", 'Boolean'>
+    readonly field_3: FieldRef<"table_secondary", 'Int'>
   }
     
 
   // Custom InputTypes
   /**
-   * test_table_secondary findUnique
+   * table_secondary findUnique
    */
-  export type test_table_secondaryFindUniqueArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type table_secondaryFindUniqueArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * Select specific fields to fetch from the test_table_secondary
+     * Select specific fields to fetch from the table_secondary
      */
-    select?: test_table_secondarySelect<ExtArgs> | null
+    select?: table_secondarySelect<ExtArgs> | null
     /**
-     * Omit specific fields from the test_table_secondary
+     * Omit specific fields from the table_secondary
      */
-    omit?: test_table_secondaryOmit<ExtArgs> | null
+    omit?: table_secondaryOmit<ExtArgs> | null
     /**
-     * Filter, which test_table_secondary to fetch.
+     * Filter, which table_secondary to fetch.
      */
-    where: test_table_secondaryWhereUniqueInput
+    where: table_secondaryWhereUniqueInput
   }
 
   /**
-   * test_table_secondary findUniqueOrThrow
+   * table_secondary findUniqueOrThrow
    */
-  export type test_table_secondaryFindUniqueOrThrowArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type table_secondaryFindUniqueOrThrowArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * Select specific fields to fetch from the test_table_secondary
+     * Select specific fields to fetch from the table_secondary
      */
-    select?: test_table_secondarySelect<ExtArgs> | null
+    select?: table_secondarySelect<ExtArgs> | null
     /**
-     * Omit specific fields from the test_table_secondary
+     * Omit specific fields from the table_secondary
      */
-    omit?: test_table_secondaryOmit<ExtArgs> | null
+    omit?: table_secondaryOmit<ExtArgs> | null
     /**
-     * Filter, which test_table_secondary to fetch.
+     * Filter, which table_secondary to fetch.
      */
-    where: test_table_secondaryWhereUniqueInput
+    where: table_secondaryWhereUniqueInput
   }
 
   /**
-   * test_table_secondary findFirst
+   * table_secondary findFirst
    */
-  export type test_table_secondaryFindFirstArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type table_secondaryFindFirstArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * Select specific fields to fetch from the test_table_secondary
+     * Select specific fields to fetch from the table_secondary
      */
-    select?: test_table_secondarySelect<ExtArgs> | null
+    select?: table_secondarySelect<ExtArgs> | null
     /**
-     * Omit specific fields from the test_table_secondary
+     * Omit specific fields from the table_secondary
      */
-    omit?: test_table_secondaryOmit<ExtArgs> | null
+    omit?: table_secondaryOmit<ExtArgs> | null
     /**
-     * Filter, which test_table_secondary to fetch.
+     * Filter, which table_secondary to fetch.
      */
-    where?: test_table_secondaryWhereInput
+    where?: table_secondaryWhereInput
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/sorting Sorting Docs}
      * 
-     * Determine the order of test_table_secondaries to fetch.
+     * Determine the order of table_secondaries to fetch.
      */
-    orderBy?: test_table_secondaryOrderByWithRelationInput | test_table_secondaryOrderByWithRelationInput[]
+    orderBy?: table_secondaryOrderByWithRelationInput | table_secondaryOrderByWithRelationInput[]
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination#cursor-based-pagination Cursor Docs}
      * 
-     * Sets the position for searching for test_table_secondaries.
+     * Sets the position for searching for table_secondaries.
      */
-    cursor?: test_table_secondaryWhereUniqueInput
+    cursor?: table_secondaryWhereUniqueInput
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
      * 
-     * Take `±n` test_table_secondaries from the position of the cursor.
+     * Take `±n` table_secondaries from the position of the cursor.
      */
     take?: number
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
      * 
-     * Skip the first `n` test_table_secondaries.
+     * Skip the first `n` table_secondaries.
      */
     skip?: number
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/distinct Distinct Docs}
      * 
-     * Filter by unique combinations of test_table_secondaries.
+     * Filter by unique combinations of table_secondaries.
      */
-    distinct?: Test_table_secondaryScalarFieldEnum | Test_table_secondaryScalarFieldEnum[]
+    distinct?: Table_secondaryScalarFieldEnum | Table_secondaryScalarFieldEnum[]
   }
 
   /**
-   * test_table_secondary findFirstOrThrow
+   * table_secondary findFirstOrThrow
    */
-  export type test_table_secondaryFindFirstOrThrowArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type table_secondaryFindFirstOrThrowArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * Select specific fields to fetch from the test_table_secondary
+     * Select specific fields to fetch from the table_secondary
      */
-    select?: test_table_secondarySelect<ExtArgs> | null
+    select?: table_secondarySelect<ExtArgs> | null
     /**
-     * Omit specific fields from the test_table_secondary
+     * Omit specific fields from the table_secondary
      */
-    omit?: test_table_secondaryOmit<ExtArgs> | null
+    omit?: table_secondaryOmit<ExtArgs> | null
     /**
-     * Filter, which test_table_secondary to fetch.
+     * Filter, which table_secondary to fetch.
      */
-    where?: test_table_secondaryWhereInput
+    where?: table_secondaryWhereInput
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/sorting Sorting Docs}
      * 
-     * Determine the order of test_table_secondaries to fetch.
+     * Determine the order of table_secondaries to fetch.
      */
-    orderBy?: test_table_secondaryOrderByWithRelationInput | test_table_secondaryOrderByWithRelationInput[]
+    orderBy?: table_secondaryOrderByWithRelationInput | table_secondaryOrderByWithRelationInput[]
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination#cursor-based-pagination Cursor Docs}
      * 
-     * Sets the position for searching for test_table_secondaries.
+     * Sets the position for searching for table_secondaries.
      */
-    cursor?: test_table_secondaryWhereUniqueInput
+    cursor?: table_secondaryWhereUniqueInput
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
      * 
-     * Take `±n` test_table_secondaries from the position of the cursor.
+     * Take `±n` table_secondaries from the position of the cursor.
      */
     take?: number
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
      * 
-     * Skip the first `n` test_table_secondaries.
+     * Skip the first `n` table_secondaries.
      */
     skip?: number
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/distinct Distinct Docs}
      * 
-     * Filter by unique combinations of test_table_secondaries.
+     * Filter by unique combinations of table_secondaries.
      */
-    distinct?: Test_table_secondaryScalarFieldEnum | Test_table_secondaryScalarFieldEnum[]
+    distinct?: Table_secondaryScalarFieldEnum | Table_secondaryScalarFieldEnum[]
   }
 
   /**
-   * test_table_secondary findMany
+   * table_secondary findMany
    */
-  export type test_table_secondaryFindManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type table_secondaryFindManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * Select specific fields to fetch from the test_table_secondary
+     * Select specific fields to fetch from the table_secondary
      */
-    select?: test_table_secondarySelect<ExtArgs> | null
+    select?: table_secondarySelect<ExtArgs> | null
     /**
-     * Omit specific fields from the test_table_secondary
+     * Omit specific fields from the table_secondary
      */
-    omit?: test_table_secondaryOmit<ExtArgs> | null
+    omit?: table_secondaryOmit<ExtArgs> | null
     /**
-     * Filter, which test_table_secondaries to fetch.
+     * Filter, which table_secondaries to fetch.
      */
-    where?: test_table_secondaryWhereInput
+    where?: table_secondaryWhereInput
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/sorting Sorting Docs}
      * 
-     * Determine the order of test_table_secondaries to fetch.
+     * Determine the order of table_secondaries to fetch.
      */
-    orderBy?: test_table_secondaryOrderByWithRelationInput | test_table_secondaryOrderByWithRelationInput[]
+    orderBy?: table_secondaryOrderByWithRelationInput | table_secondaryOrderByWithRelationInput[]
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination#cursor-based-pagination Cursor Docs}
      * 
-     * Sets the position for listing test_table_secondaries.
+     * Sets the position for listing table_secondaries.
      */
-    cursor?: test_table_secondaryWhereUniqueInput
+    cursor?: table_secondaryWhereUniqueInput
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
      * 
-     * Take `±n` test_table_secondaries from the position of the cursor.
+     * Take `±n` table_secondaries from the position of the cursor.
      */
     take?: number
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
      * 
-     * Skip the first `n` test_table_secondaries.
+     * Skip the first `n` table_secondaries.
      */
     skip?: number
-    distinct?: Test_table_secondaryScalarFieldEnum | Test_table_secondaryScalarFieldEnum[]
+    distinct?: Table_secondaryScalarFieldEnum | Table_secondaryScalarFieldEnum[]
   }
 
   /**
-   * test_table_secondary create
+   * table_secondary create
    */
-  export type test_table_secondaryCreateArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type table_secondaryCreateArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * Select specific fields to fetch from the test_table_secondary
+     * Select specific fields to fetch from the table_secondary
      */
-    select?: test_table_secondarySelect<ExtArgs> | null
+    select?: table_secondarySelect<ExtArgs> | null
     /**
-     * Omit specific fields from the test_table_secondary
+     * Omit specific fields from the table_secondary
      */
-    omit?: test_table_secondaryOmit<ExtArgs> | null
+    omit?: table_secondaryOmit<ExtArgs> | null
     /**
-     * The data needed to create a test_table_secondary.
+     * The data needed to create a table_secondary.
      */
-    data?: XOR<test_table_secondaryCreateInput, test_table_secondaryUncheckedCreateInput>
+    data?: XOR<table_secondaryCreateInput, table_secondaryUncheckedCreateInput>
   }
 
   /**
-   * test_table_secondary createMany
+   * table_secondary createMany
    */
-  export type test_table_secondaryCreateManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type table_secondaryCreateManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * The data used to create many test_table_secondaries.
+     * The data used to create many table_secondaries.
      */
-    data: test_table_secondaryCreateManyInput | test_table_secondaryCreateManyInput[]
+    data: table_secondaryCreateManyInput | table_secondaryCreateManyInput[]
     skipDuplicates?: boolean
   }
 
   /**
-   * test_table_secondary createManyAndReturn
+   * table_secondary createManyAndReturn
    */
-  export type test_table_secondaryCreateManyAndReturnArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type table_secondaryCreateManyAndReturnArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * Select specific fields to fetch from the test_table_secondary
+     * Select specific fields to fetch from the table_secondary
      */
-    select?: test_table_secondarySelectCreateManyAndReturn<ExtArgs> | null
+    select?: table_secondarySelectCreateManyAndReturn<ExtArgs> | null
     /**
-     * Omit specific fields from the test_table_secondary
+     * Omit specific fields from the table_secondary
      */
-    omit?: test_table_secondaryOmit<ExtArgs> | null
+    omit?: table_secondaryOmit<ExtArgs> | null
     /**
-     * The data used to create many test_table_secondaries.
+     * The data used to create many table_secondaries.
      */
-    data: test_table_secondaryCreateManyInput | test_table_secondaryCreateManyInput[]
+    data: table_secondaryCreateManyInput | table_secondaryCreateManyInput[]
     skipDuplicates?: boolean
   }
 
   /**
-   * test_table_secondary update
+   * table_secondary update
    */
-  export type test_table_secondaryUpdateArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type table_secondaryUpdateArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * Select specific fields to fetch from the test_table_secondary
+     * Select specific fields to fetch from the table_secondary
      */
-    select?: test_table_secondarySelect<ExtArgs> | null
+    select?: table_secondarySelect<ExtArgs> | null
     /**
-     * Omit specific fields from the test_table_secondary
+     * Omit specific fields from the table_secondary
      */
-    omit?: test_table_secondaryOmit<ExtArgs> | null
+    omit?: table_secondaryOmit<ExtArgs> | null
     /**
-     * The data needed to update a test_table_secondary.
+     * The data needed to update a table_secondary.
      */
-    data: XOR<test_table_secondaryUpdateInput, test_table_secondaryUncheckedUpdateInput>
+    data: XOR<table_secondaryUpdateInput, table_secondaryUncheckedUpdateInput>
     /**
-     * Choose, which test_table_secondary to update.
+     * Choose, which table_secondary to update.
      */
-    where: test_table_secondaryWhereUniqueInput
+    where: table_secondaryWhereUniqueInput
   }
 
   /**
-   * test_table_secondary updateMany
+   * table_secondary updateMany
    */
-  export type test_table_secondaryUpdateManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type table_secondaryUpdateManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * The data used to update test_table_secondaries.
+     * The data used to update table_secondaries.
      */
-    data: XOR<test_table_secondaryUpdateManyMutationInput, test_table_secondaryUncheckedUpdateManyInput>
+    data: XOR<table_secondaryUpdateManyMutationInput, table_secondaryUncheckedUpdateManyInput>
     /**
-     * Filter which test_table_secondaries to update
+     * Filter which table_secondaries to update
      */
-    where?: test_table_secondaryWhereInput
+    where?: table_secondaryWhereInput
     /**
-     * Limit how many test_table_secondaries to update.
+     * Limit how many table_secondaries to update.
      */
     limit?: number
   }
 
   /**
-   * test_table_secondary updateManyAndReturn
+   * table_secondary updateManyAndReturn
    */
-  export type test_table_secondaryUpdateManyAndReturnArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type table_secondaryUpdateManyAndReturnArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * Select specific fields to fetch from the test_table_secondary
+     * Select specific fields to fetch from the table_secondary
      */
-    select?: test_table_secondarySelectUpdateManyAndReturn<ExtArgs> | null
+    select?: table_secondarySelectUpdateManyAndReturn<ExtArgs> | null
     /**
-     * Omit specific fields from the test_table_secondary
+     * Omit specific fields from the table_secondary
      */
-    omit?: test_table_secondaryOmit<ExtArgs> | null
+    omit?: table_secondaryOmit<ExtArgs> | null
     /**
-     * The data used to update test_table_secondaries.
+     * The data used to update table_secondaries.
      */
-    data: XOR<test_table_secondaryUpdateManyMutationInput, test_table_secondaryUncheckedUpdateManyInput>
+    data: XOR<table_secondaryUpdateManyMutationInput, table_secondaryUncheckedUpdateManyInput>
     /**
-     * Filter which test_table_secondaries to update
+     * Filter which table_secondaries to update
      */
-    where?: test_table_secondaryWhereInput
+    where?: table_secondaryWhereInput
     /**
-     * Limit how many test_table_secondaries to update.
+     * Limit how many table_secondaries to update.
      */
     limit?: number
   }
 
   /**
-   * test_table_secondary upsert
+   * table_secondary upsert
    */
-  export type test_table_secondaryUpsertArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type table_secondaryUpsertArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * Select specific fields to fetch from the test_table_secondary
+     * Select specific fields to fetch from the table_secondary
      */
-    select?: test_table_secondarySelect<ExtArgs> | null
+    select?: table_secondarySelect<ExtArgs> | null
     /**
-     * Omit specific fields from the test_table_secondary
+     * Omit specific fields from the table_secondary
      */
-    omit?: test_table_secondaryOmit<ExtArgs> | null
+    omit?: table_secondaryOmit<ExtArgs> | null
     /**
-     * The filter to search for the test_table_secondary to update in case it exists.
+     * The filter to search for the table_secondary to update in case it exists.
      */
-    where: test_table_secondaryWhereUniqueInput
+    where: table_secondaryWhereUniqueInput
     /**
-     * In case the test_table_secondary found by the `where` argument doesn't exist, create a new test_table_secondary with this data.
+     * In case the table_secondary found by the `where` argument doesn't exist, create a new table_secondary with this data.
      */
-    create: XOR<test_table_secondaryCreateInput, test_table_secondaryUncheckedCreateInput>
+    create: XOR<table_secondaryCreateInput, table_secondaryUncheckedCreateInput>
     /**
-     * In case the test_table_secondary was found with the provided `where` argument, update it with this data.
+     * In case the table_secondary was found with the provided `where` argument, update it with this data.
      */
-    update: XOR<test_table_secondaryUpdateInput, test_table_secondaryUncheckedUpdateInput>
+    update: XOR<table_secondaryUpdateInput, table_secondaryUncheckedUpdateInput>
   }
 
   /**
-   * test_table_secondary delete
+   * table_secondary delete
    */
-  export type test_table_secondaryDeleteArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type table_secondaryDeleteArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * Select specific fields to fetch from the test_table_secondary
+     * Select specific fields to fetch from the table_secondary
      */
-    select?: test_table_secondarySelect<ExtArgs> | null
+    select?: table_secondarySelect<ExtArgs> | null
     /**
-     * Omit specific fields from the test_table_secondary
+     * Omit specific fields from the table_secondary
      */
-    omit?: test_table_secondaryOmit<ExtArgs> | null
+    omit?: table_secondaryOmit<ExtArgs> | null
     /**
-     * Filter which test_table_secondary to delete.
+     * Filter which table_secondary to delete.
      */
-    where: test_table_secondaryWhereUniqueInput
+    where: table_secondaryWhereUniqueInput
   }
 
   /**
-   * test_table_secondary deleteMany
+   * table_secondary deleteMany
    */
-  export type test_table_secondaryDeleteManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type table_secondaryDeleteManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * Filter which test_table_secondaries to delete
+     * Filter which table_secondaries to delete
      */
-    where?: test_table_secondaryWhereInput
+    where?: table_secondaryWhereInput
     /**
-     * Limit how many test_table_secondaries to delete.
+     * Limit how many table_secondaries to delete.
      */
     limit?: number
   }
 
   /**
-   * test_table_secondary without action
+   * table_secondary without action
    */
-  export type test_table_secondaryDefaultArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type table_secondaryDefaultArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * Select specific fields to fetch from the test_table_secondary
+     * Select specific fields to fetch from the table_secondary
      */
-    select?: test_table_secondarySelect<ExtArgs> | null
+    select?: table_secondarySelect<ExtArgs> | null
     /**
-     * Omit specific fields from the test_table_secondary
+     * Omit specific fields from the table_secondary
      */
-    omit?: test_table_secondaryOmit<ExtArgs> | null
+    omit?: table_secondaryOmit<ExtArgs> | null
   }
 
 
@@ -1894,14 +1894,14 @@ export namespace Prisma {
   export type TransactionIsolationLevel = (typeof TransactionIsolationLevel)[keyof typeof TransactionIsolationLevel]
 
 
-  export const Test_table_secondaryScalarFieldEnum: {
+  export const Table_secondaryScalarFieldEnum: {
     id: 'id',
     name: 'name',
     del: 'del',
     field_3: 'field_3'
   };
 
-  export type Test_table_secondaryScalarFieldEnum = (typeof Test_table_secondaryScalarFieldEnum)[keyof typeof Test_table_secondaryScalarFieldEnum]
+  export type Table_secondaryScalarFieldEnum = (typeof Table_secondaryScalarFieldEnum)[keyof typeof Table_secondaryScalarFieldEnum]
 
 
   export const SortOrder: {
@@ -1985,95 +1985,95 @@ export namespace Prisma {
    */
 
 
-  export type test_table_secondaryWhereInput = {
-    AND?: test_table_secondaryWhereInput | test_table_secondaryWhereInput[]
-    OR?: test_table_secondaryWhereInput[]
-    NOT?: test_table_secondaryWhereInput | test_table_secondaryWhereInput[]
-    id?: IntFilter<"test_table_secondary"> | number
-    name?: StringNullableFilter<"test_table_secondary"> | string | null
-    del?: BoolFilter<"test_table_secondary"> | boolean
-    field_3?: IntFilter<"test_table_secondary"> | number
+  export type table_secondaryWhereInput = {
+    AND?: table_secondaryWhereInput | table_secondaryWhereInput[]
+    OR?: table_secondaryWhereInput[]
+    NOT?: table_secondaryWhereInput | table_secondaryWhereInput[]
+    id?: IntFilter<"table_secondary"> | number
+    name?: StringNullableFilter<"table_secondary"> | string | null
+    del?: BoolFilter<"table_secondary"> | boolean
+    field_3?: IntFilter<"table_secondary"> | number
   }
 
-  export type test_table_secondaryOrderByWithRelationInput = {
+  export type table_secondaryOrderByWithRelationInput = {
     id?: SortOrder
     name?: SortOrderInput | SortOrder
     del?: SortOrder
     field_3?: SortOrder
   }
 
-  export type test_table_secondaryWhereUniqueInput = Prisma.AtLeast<{
+  export type table_secondaryWhereUniqueInput = Prisma.AtLeast<{
     id?: number
-    AND?: test_table_secondaryWhereInput | test_table_secondaryWhereInput[]
-    OR?: test_table_secondaryWhereInput[]
-    NOT?: test_table_secondaryWhereInput | test_table_secondaryWhereInput[]
-    name?: StringNullableFilter<"test_table_secondary"> | string | null
-    del?: BoolFilter<"test_table_secondary"> | boolean
-    field_3?: IntFilter<"test_table_secondary"> | number
+    AND?: table_secondaryWhereInput | table_secondaryWhereInput[]
+    OR?: table_secondaryWhereInput[]
+    NOT?: table_secondaryWhereInput | table_secondaryWhereInput[]
+    name?: StringNullableFilter<"table_secondary"> | string | null
+    del?: BoolFilter<"table_secondary"> | boolean
+    field_3?: IntFilter<"table_secondary"> | number
   }, "id">
 
-  export type test_table_secondaryOrderByWithAggregationInput = {
+  export type table_secondaryOrderByWithAggregationInput = {
     id?: SortOrder
     name?: SortOrderInput | SortOrder
     del?: SortOrder
     field_3?: SortOrder
-    _count?: test_table_secondaryCountOrderByAggregateInput
-    _avg?: test_table_secondaryAvgOrderByAggregateInput
-    _max?: test_table_secondaryMaxOrderByAggregateInput
-    _min?: test_table_secondaryMinOrderByAggregateInput
-    _sum?: test_table_secondarySumOrderByAggregateInput
+    _count?: table_secondaryCountOrderByAggregateInput
+    _avg?: table_secondaryAvgOrderByAggregateInput
+    _max?: table_secondaryMaxOrderByAggregateInput
+    _min?: table_secondaryMinOrderByAggregateInput
+    _sum?: table_secondarySumOrderByAggregateInput
   }
 
-  export type test_table_secondaryScalarWhereWithAggregatesInput = {
-    AND?: test_table_secondaryScalarWhereWithAggregatesInput | test_table_secondaryScalarWhereWithAggregatesInput[]
-    OR?: test_table_secondaryScalarWhereWithAggregatesInput[]
-    NOT?: test_table_secondaryScalarWhereWithAggregatesInput | test_table_secondaryScalarWhereWithAggregatesInput[]
-    id?: IntWithAggregatesFilter<"test_table_secondary"> | number
-    name?: StringNullableWithAggregatesFilter<"test_table_secondary"> | string | null
-    del?: BoolWithAggregatesFilter<"test_table_secondary"> | boolean
-    field_3?: IntWithAggregatesFilter<"test_table_secondary"> | number
+  export type table_secondaryScalarWhereWithAggregatesInput = {
+    AND?: table_secondaryScalarWhereWithAggregatesInput | table_secondaryScalarWhereWithAggregatesInput[]
+    OR?: table_secondaryScalarWhereWithAggregatesInput[]
+    NOT?: table_secondaryScalarWhereWithAggregatesInput | table_secondaryScalarWhereWithAggregatesInput[]
+    id?: IntWithAggregatesFilter<"table_secondary"> | number
+    name?: StringNullableWithAggregatesFilter<"table_secondary"> | string | null
+    del?: BoolWithAggregatesFilter<"table_secondary"> | boolean
+    field_3?: IntWithAggregatesFilter<"table_secondary"> | number
   }
 
-  export type test_table_secondaryCreateInput = {
+  export type table_secondaryCreateInput = {
     name?: string | null
     del?: boolean
     field_3?: number
   }
 
-  export type test_table_secondaryUncheckedCreateInput = {
+  export type table_secondaryUncheckedCreateInput = {
     id?: number
     name?: string | null
     del?: boolean
     field_3?: number
   }
 
-  export type test_table_secondaryUpdateInput = {
+  export type table_secondaryUpdateInput = {
     name?: NullableStringFieldUpdateOperationsInput | string | null
     del?: BoolFieldUpdateOperationsInput | boolean
     field_3?: IntFieldUpdateOperationsInput | number
   }
 
-  export type test_table_secondaryUncheckedUpdateInput = {
+  export type table_secondaryUncheckedUpdateInput = {
     id?: IntFieldUpdateOperationsInput | number
     name?: NullableStringFieldUpdateOperationsInput | string | null
     del?: BoolFieldUpdateOperationsInput | boolean
     field_3?: IntFieldUpdateOperationsInput | number
   }
 
-  export type test_table_secondaryCreateManyInput = {
+  export type table_secondaryCreateManyInput = {
     id?: number
     name?: string | null
     del?: boolean
     field_3?: number
   }
 
-  export type test_table_secondaryUpdateManyMutationInput = {
+  export type table_secondaryUpdateManyMutationInput = {
     name?: NullableStringFieldUpdateOperationsInput | string | null
     del?: BoolFieldUpdateOperationsInput | boolean
     field_3?: IntFieldUpdateOperationsInput | number
   }
 
-  export type test_table_secondaryUncheckedUpdateManyInput = {
+  export type table_secondaryUncheckedUpdateManyInput = {
     id?: IntFieldUpdateOperationsInput | number
     name?: NullableStringFieldUpdateOperationsInput | string | null
     del?: BoolFieldUpdateOperationsInput | boolean
@@ -2116,33 +2116,33 @@ export namespace Prisma {
     nulls?: NullsOrder
   }
 
-  export type test_table_secondaryCountOrderByAggregateInput = {
+  export type table_secondaryCountOrderByAggregateInput = {
     id?: SortOrder
     name?: SortOrder
     del?: SortOrder
     field_3?: SortOrder
   }
 
-  export type test_table_secondaryAvgOrderByAggregateInput = {
+  export type table_secondaryAvgOrderByAggregateInput = {
     id?: SortOrder
     field_3?: SortOrder
   }
 
-  export type test_table_secondaryMaxOrderByAggregateInput = {
-    id?: SortOrder
-    name?: SortOrder
-    del?: SortOrder
-    field_3?: SortOrder
-  }
-
-  export type test_table_secondaryMinOrderByAggregateInput = {
+  export type table_secondaryMaxOrderByAggregateInput = {
     id?: SortOrder
     name?: SortOrder
     del?: SortOrder
     field_3?: SortOrder
   }
 
-  export type test_table_secondarySumOrderByAggregateInput = {
+  export type table_secondaryMinOrderByAggregateInput = {
+    id?: SortOrder
+    name?: SortOrder
+    del?: SortOrder
+    field_3?: SortOrder
+  }
+
+  export type table_secondarySumOrderByAggregateInput = {
     id?: SortOrder
     field_3?: SortOrder
   }

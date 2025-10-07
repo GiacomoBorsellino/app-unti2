@@ -3,7 +3,7 @@ import { db } from "../../../../config/dbConfig";
 
 export const apiTestDb1_main = async (req: Request, res: Response) => {
   console.log("Sono nel Controller apiTest apiTestDb1_main");
-  await db.secondary.test_table_secondary.findFirst().then((data) => {
+  await db.secondary.table_secondary.findFirst().then((data) => {
     res.json(data);
   });
 };
