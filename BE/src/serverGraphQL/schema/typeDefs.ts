@@ -1,11 +1,35 @@
-import { mergeTypeDefs } from "@graphql-tools/merge";
+import gql from "graphql-tag";
 
-// Import typeDefs
-import mainTypeDefs from "../modules/main/typeDefs/mainTypeDefs";
+const typeDefs = gql`
+  type Document {
+    id: ID!
+    name: String
+    description: String
+    pathImg: String
+    pathFile: String
+    categories: [Categories!]!
+  }
 
-// Merge typeDefs
-const typeDefs = mergeTypeDefs([mainTypeDefs]);
+  type Categories {
+    id: ID!
+    description: String
+    documents: [Document!]!
+  }
 
-export default typeDefs;
+  type User {
+    id: ID!
+    name: String!
+    email: String
+  }
+
+  type Query {
+    getDocuments: [Document!]!
+    getUsers: [User!]!
+  }
+
+  type Mutation {
+    _empty: String
+  }
+`;
 
 export { typeDefs };

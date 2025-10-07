@@ -9,6 +9,8 @@
     "start": "node ./scripts/main/start.js",
     "build": "node ./scripts/main/build.js",
     "lint": "node ./scripts/main/eslint.js",
+    "migrate": "node ./scripts/database/migrate.js",
+    "generate": "node ./scripts/database/generate.js",
     "migrate_main": "node ./scripts/database/migrateMain.js",
     "generate_main": "node ./scripts/database/generateClientMain.js",
     "migrate_secondary": "node ./scripts/database/migrateSecondary.js",
@@ -16,6 +18,7 @@
   },
   "dependencies": {
     "@apollo/server": "^5.0.0",
+    "@graphql-tools/load-files": "^7.0.1",
     "@graphql-tools/merge": "^9.1.1",
     "@prisma/client": "^6.16.3",
     "@types/bcrypt": "^6.0.0",

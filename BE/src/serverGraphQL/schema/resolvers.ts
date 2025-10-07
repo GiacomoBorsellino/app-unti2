@@ -1,11 +1,15 @@
 // Import Resolvers
-import { mainResolvers } from "../modules/main/resolvers/mainResolvers";
+import { documentResolvers } from "./modules/documents/documentResolvers";
+import { usersResolvers } from "./modules/users/userResolvers";
+
 const resolvers = {
   Query: {
-    ...mainResolvers.query,
+    ...documentResolvers.queryDocuments,
+    ...usersResolvers.queryUsers,
   },
   Mutation: {
-    ...mainResolvers.mutation,
+    ...documentResolvers.mutationDocuments,
+    ...usersResolvers.mutationUsers,
   },
 };
 
