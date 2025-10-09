@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 import Docs from "./docs";
 import Selectors from "./Selectors";
@@ -7,7 +7,19 @@ import TableData from "./table";
 import "./List.css";
 import { Input } from "@/components/ui/input";
 
+import { getDocuments } from "./documentService";
+
 function List() {
+  const [documents, setDocuments] = useState([]);
+
+  useEffect(() => {
+    async function fetchData() {
+      const docs = await getDocuments();
+      setDocuments(docs);
+    }
+    fetchData();
+  }, []);
+
   const [data, setData] = useState("");
 
   function setCategory(category: string): void {

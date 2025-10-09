@@ -1,0 +1,14 @@
+.header {
+    height: 5vh;
+}
+
+.main {
+    height: 85vh;
+    width: 95vw;
+    margin: auto;
+}
+
+.footer {
+    height: 5vh;
+    text-align: center;
+}

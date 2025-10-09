@@ -8,30 +8,15 @@ function App() {
   return (
     <>
       <div className="flex flex-col justify-center gap-5">
-        <header
-          style={{
-            height: "5vh",
-          }}
-        >
+        <header className="header">
           <Header></Header>
         </header>
 
-        <main
-          style={{
-            height: "85vh",
-            width: "95vw",
-            margin: "auto",
-          }}
-        >
+        <main className="main">
           <Outlet />
         </main>
 
-        <footer
-          className="text-center"
-          style={{
-            height: "5vh",
-          }}
-        >
+        <footer className="footer">
           <Footer></Footer>
         </footer>
       </div>

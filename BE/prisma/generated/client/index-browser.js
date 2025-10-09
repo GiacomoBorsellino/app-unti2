@@ -138,6 +138,12 @@ exports.Prisma.DocumentCategoriesScalarFieldEnum = {
   categoryId: 'categoryId'
 };
 
+exports.Prisma.UserScalarFieldEnum = {
+  id: 'id',
+  name: 'name',
+  email: 'email'
+};
+
 exports.Prisma.SortOrder = {
   asc: 'asc',
   desc: 'desc'
@@ -152,7 +158,8 @@ exports.Prisma.QueryMode = {
 exports.Prisma.ModelName = {
   Document: 'Document',
   Categories: 'Categories',
-  DocumentCategories: 'DocumentCategories'
+  DocumentCategories: 'DocumentCategories',
+  User: 'User'
 };
 
 /**

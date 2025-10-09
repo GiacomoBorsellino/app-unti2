@@ -5,11 +5,12 @@ const { Pool } = require("pg");
 import * as dotenv from "dotenv";
 dotenv.config();
 
-import { PrismaClient as PrismaClientMain } from "../prisma/schema_main/generated/client_main";
+import { PrismaClient as PrismaClientMain } from "../prisma/generated/client";
 const client_main = new PrismaClientMain();
 
-import { PrismaClient as PrismaClientSecondary } from "../prisma/schema_secondary/generated/client_secondary";
-const client_secondary = new PrismaClientSecondary();
+// import { PrismaClient as PrismaClientSecondary } from "../prisma/schema_secondary/generated/client_secondary";
+// const client_secondary = new PrismaClientSecondary();
+console.log("client_main ", client_main);
 
 const db_data = {
   databases: [
@@ -43,9 +44,9 @@ const db_secondary_pool = new Pool({
 
 const db = {
   main_config: db_data,
-  secondary_config: db_secondary_pool,
+  // secondary_config: db_secondary_pool,
   main: client_main,
-  secondary: client_secondary,
+  // secondary: client_secondary,
 };
 
 export { db };

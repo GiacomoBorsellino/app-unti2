@@ -21,9 +21,9 @@ const schema = makeExecutableSchema({ typeDefs, resolvers });
 
 // Schema + Middleware
 const schemaWithMiddleware = applyMiddleware(
-  schema,
+  schema
   // middleware.checkToken
-  middleware.checkPermission
+  // middleware.checkPermission
 );
 
 const server: any = new ApolloServer<any>({ schema: schemaWithMiddleware });
