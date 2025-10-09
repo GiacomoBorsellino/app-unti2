@@ -20,6 +20,7 @@ export async function getDocuments() {
       query: GET_DOCUMENTS,
       fetchPolicy: "no-cache", // evita dati vecchi in cache se serve
     });
+    // test
     console.log("aaaaa ", data.getDocuments);
 
     return data.getDocuments;
