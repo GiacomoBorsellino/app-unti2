@@ -7,13 +7,13 @@ const documentTypeDefs = gql`
     description: String
     pathImg: String
     pathFile: String
-    categories: [Categories!]!
+    categories: [Categories]
   }
 
   type Categories {
     id: ID!
     description: String
-    documents: [Document!]!
+    documents: [Document]
   }
 
   type Query {

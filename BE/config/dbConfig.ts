@@ -10,7 +10,6 @@ const client_main = new PrismaClientMain();
 
 // import { PrismaClient as PrismaClientSecondary } from "../prisma/schema_secondary/generated/client_secondary";
 // const client_secondary = new PrismaClientSecondary();
-console.log("client_main ", client_main);
 
 const db_data = {
   databases: [

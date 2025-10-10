@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import { Badge } from "@/components/ui/badge";
 import documents from "@/data/projects/documents";
 import type { docInterface } from "@/data/projects/documentsInterface";
+import { getDocuments } from "./documentService";
 
 import "./List.css";
 
@@ -10,10 +11,19 @@ export default function Docs({ category, titleFiltered }: any) {
 
   const [selectedTitle, setSelectedTitle] = useState(titleFiltered);
 
+  const [docs, setDocuments] = useState([]);
+
   // ogni volta che la prop "category" cambia → aggiorno lo stato interno
   useEffect(() => {
     setSelectedCategory(category);
     setSelectedTitle(titleFiltered);
+
+    async function fetchData() {
+      const docs = await getDocuments();
+      setDocuments(docs);
+      console.log("documents ", docs);
+    }
+    fetchData();
   }, [category, titleFiltered]);
 
   return (

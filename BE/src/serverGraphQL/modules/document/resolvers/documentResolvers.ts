@@ -1,16 +1,65 @@
+import { log } from "console";
 import { db } from "../../../../../config/dbConfig";
-import * as jwt from "jsonwebtoken";
-import { secret } from "../../../../../config/jwt.conf";
+import fs from "fs";
+import path from "path";
 
 const query = {
   async getDocuments(parent, args, context, info) {
     // console.log("================= IN getDocuments", parent.input);
-    let data = await db.main.document.findMany().then((data) => {
-      console.log("================= IN getDocuments", data);
+    try {
+      let docs = await db.main.document
+        .findMany({
+          include: {
+            categories: {
+              include: {
+                category: true, // include la tabella Categories
+              },
+            },
+          },
+        })
+        .then((data) => {
+          return data;
+        });
 
-      return data;
-    });
-    return data;
+      console.log("================= IN getDocuments", docs);
+      let pathUpload: string = "uploads/images";
+      return docs.map((file) => {
+        const thumbnailPath = path.join(pathUpload, file.pathImg.substring(7)); // rivedi path su db e sistem
+        const buffer = fs.readFileSync(thumbnailPath);
+
+        console.log({
+          id: file.id,
+          name: file.name,
+          description: file.description,
+          pathFile: file.pathFile,
+          pathImg: `data:image/jpeg;base64,${buffer.toString("base64")}`,
+          categories: file.categories
+            .map((data) => {
+              return data.category;
+            })
+            .map((data) => {
+              return data.description;
+            }),
+        });
+
+        return {
+          id: file.id,
+          name: file.name,
+          description: file.description,
+          pathFile: file.pathFile,
+          pathImg: `data:image/jpeg;base64,${buffer.toString("base64")}`,
+          categories: file.categories
+            .map((data) => {
+              return data.category;
+            })
+            .map((data) => {
+              return data.description;
+            }),
+        };
+      });
+    } catch (error) {
+      console.log("error ", error);
+    }
   },
 };
 
