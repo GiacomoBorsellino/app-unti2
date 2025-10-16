@@ -3,18 +3,19 @@
 # FE
 
 - [x] togli bottoniera (metti input)
+- [x] Metti input ricerca in list
+- [] download icone base
 - [] style scrollbars
 - [] homepage
 - [] sistema stile
 - [] Scrivi wtf
 - [] Amplia about me
-- [] Metti input ricerca in list
 
 # BE
 
 - [] controlla "type": "commonjs",
-- [] semplice db
-- [] blob thumb
+- [x] semplice db
+- [x] blob thumb
 - [] user
 - [] definisci er
 - [] graphql upload

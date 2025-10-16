@@ -7,8 +7,23 @@ const GET_DOCUMENTS = gql`
     getDocuments {
       id
       name
-      pathImg
+      description
       pathFile
+      pathImg
+      categories
+    }
+  }
+`;
+
+const DOWNLOAD_FILE = gql`
+  query DownloadDocument($input: inputRichiedente) {
+    downloadDocument(input: $input) {
+      id
+      name
+      description
+      pathFile
+      pathImg
+      categories
     }
   }
 `;
@@ -23,6 +38,19 @@ export async function getDocuments() {
     return data.getDocuments;
   } catch (err) {
     console.error("❌ Errore getDocuments:", err);
+    throw err;
+  }
+}
+
+export async function downloadDocument() {
+  try {
+    const { data }: any = await client.query({
+      query: DOWNLOAD_FILE,
+      fetchPolicy: "no-cache", // evita dati vecchi in cache se serve
+    });
+    return data.downloadDocument;
+  } catch (err) {
+    console.error("❌ Errore downloadDocument:", err);
     throw err;
   }
 }

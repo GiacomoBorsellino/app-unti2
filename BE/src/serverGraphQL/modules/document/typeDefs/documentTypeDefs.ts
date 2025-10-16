@@ -7,7 +7,7 @@ const documentTypeDefs = gql`
     description: String
     pathImg: String
     pathFile: String
-    categories: [Categories]
+    categories: [String]
   }
 
   type Categories {
@@ -21,6 +21,7 @@ const documentTypeDefs = gql`
     test queries main
     """
     getDocuments: [Document]
+    downloadDocument(input: Int): [Document]
   }
 
   type Mutation {

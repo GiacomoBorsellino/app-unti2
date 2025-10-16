@@ -27,36 +27,45 @@ const query = {
         const thumbnailPath = path.join(pathUpload, file.pathImg.substring(7)); // rivedi path su db e sistem
         const buffer = fs.readFileSync(thumbnailPath);
 
-        console.log({
+        let categories = file.categories
+          .map((data) => {
+            return data.category;
+          })
+          .map((data) => {
+            return data.description;
+          });
+
+        let documents = {
           id: file.id,
           name: file.name,
           description: file.description,
           pathFile: file.pathFile,
           pathImg: `data:image/jpeg;base64,${buffer.toString("base64")}`,
-          categories: file.categories
-            .map((data) => {
-              return data.category;
-            })
-            .map((data) => {
-              return data.description;
-            }),
+          categories: categories,
+        };
+
+        return documents;
+      });
+    } catch (error) {
+      console.log("error ", error);
+    }
+  },
+  async downloadDocument(parent, args, context, info) {
+    // console.log("================= IN getDocuments", parent.input);
+
+    const id = parent.input.id;
+    try {
+      let file = await db.main.document
+        .findUnique({
+          where: {
+            id: id,
+          },
+        })
+        .then((file) => {
+          return file;
         });
 
-        return {
-          id: file.id,
-          name: file.name,
-          description: file.description,
-          pathFile: file.pathFile,
-          pathImg: `data:image/jpeg;base64,${buffer.toString("base64")}`,
-          categories: file.categories
-            .map((data) => {
-              return data.category;
-            })
-            .map((data) => {
-              return data.description;
-            }),
-        };
-      });
+      return file;
     } catch (error) {
       console.log("error ", error);
     }

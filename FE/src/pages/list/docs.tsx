@@ -1,39 +1,33 @@
 import { useEffect, useState } from "react";
 import { Badge } from "@/components/ui/badge";
-import documents from "@/data/projects/documents";
+
 import type { docInterface } from "@/data/projects/documentsInterface";
-import { getDocuments } from "./documentService";
 
 import "./List.css";
 
-export default function Docs({ category, titleFiltered }: any) {
+export default function Docs({ documents, category, titleFiltered }: any) {
   const [selectedCategory, setSelectedCategory] = useState(category);
 
   const [selectedTitle, setSelectedTitle] = useState(titleFiltered);
-
-  const [docs, setDocuments] = useState([]);
 
   // ogni volta che la prop "category" cambia → aggiorno lo stato interno
   useEffect(() => {
     setSelectedCategory(category);
     setSelectedTitle(titleFiltered);
-
-    async function fetchData() {
-      const docs = await getDocuments();
-      setDocuments(docs);
-      console.log("documents ", docs);
-    }
-    fetchData();
   }, [category, titleFiltered]);
+
+  const compareFn = (firstItem: docInterface, secondItem: docInterface) =>
+    firstItem.id - secondItem.id;
 
   return (
     <div>
       <div className="grid sm:grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6 pb-8 ">
         {documents
+          .sort(compareFn)
           .filter((docs: docInterface) => {
             return selectedCategory === "" || selectedCategory === "all"
               ? docs
-              : docs.tag.includes(selectedCategory);
+              : docs.categories.includes(selectedCategory);
           })
           .filter((docs: docInterface) => {
             return selectedTitle === "" || selectedTitle === null
@@ -49,7 +43,7 @@ export default function Docs({ category, titleFiltered }: any) {
                 <div className="bg-white border-border shadow-shadow rounded-base bottom-[2px]! border-2 ">
                   <img
                     className="rounded-base w-4/5 mx-auto"
-                    src={document.img}
+                    src={document.pathImg}
                     alt={document.name}
                   />
                 </div>
@@ -64,14 +58,14 @@ export default function Docs({ category, titleFiltered }: any) {
                   <div className="mt-8 gap-5">
                     <a
                       className="border-border bg-secondary-background text-foreground shadow-shadow rounded-base font-base hover:translate-x-boxShadowX hover:translate-y-boxShadowY cursor-pointer border-2 px-4 py-2 text-center text-sm transition-all hover:shadow-none sm:text-base"
-                      href={document.docDownload}
+                      href={document.pathFile}
                       target="_blank"
                     >
                       Download
                     </a>
                   </div>
                   <div className="flex flex-row align-middle justify-end gap-2 mt-8">
-                    {document.tag.map((tag: string) => {
+                    {document.categories.map((tag: string) => {
                       switch (tag) {
                         case "front-end":
                           return <Badge className="bg-red-400">{tag}</Badge>;

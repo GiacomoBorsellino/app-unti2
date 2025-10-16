@@ -3,11 +3,24 @@ import { useEffect, useState } from "react";
 import Docs from "./docs";
 import Selectors from "./Selectors";
 import TableData from "./table";
+import { getDocuments } from "./documentService";
 
 import "./List.css";
 import { Input } from "@/components/ui/input";
 
 function List() {
+  const [docs, setDocuments] = useState([]);
+
+  // ogni volta che la prop "category" cambia → aggiorno lo stato interno
+  useEffect(() => {
+    async function fetchData() {
+      const docs = await getDocuments();
+      setDocuments(docs);
+      console.log("documents ", docs);
+    }
+    fetchData();
+  }, []);
+
   const [data, setData] = useState("");
 
   function setCategory(category: string): void {
@@ -63,7 +76,11 @@ function List() {
                 height: "70vh",
               }}
             >
-              <TableData category={data} titleFiltered={title}></TableData>
+              <TableData
+                documents={docs}
+                category={data}
+                titleFiltered={title}
+              ></TableData>
             </section>
           ) : (
             <section
@@ -76,7 +93,11 @@ function List() {
                 height: "70vh",
               }}
             >
-              <Docs category={data} titleFiltered={title}></Docs>
+              <Docs
+                documents={docs}
+                category={data}
+                titleFiltered={title}
+              ></Docs>
             </section>
           )}
         </section>

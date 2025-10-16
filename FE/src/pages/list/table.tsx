@@ -9,13 +9,11 @@ import {
   TableHeader,
   TableRow,
 } from "@/components/ui/table";
-// import type { DocsPropsInterface } from "@/data/projects/DocsPropsInterface";
-import documents from "@/data/projects/documents";
 import type { docInterface } from "@/data/projects/documentsInterface";
 
 import { useEffect, useState } from "react";
 
-export default function TableData({ category, titleFiltered }: any) {
+export default function TableData({ documents, category, titleFiltered }: any) {
   const [selectedCategory, setSelectedCategory] = useState(category);
 
   const [selectedTitle, setSelectedTitle] = useState(titleFiltered);
@@ -45,7 +43,7 @@ export default function TableData({ category, titleFiltered }: any) {
           .filter((docs: docInterface) => {
             return selectedCategory === "" || selectedCategory === "all"
               ? docs
-              : docs.tag.includes(selectedCategory);
+              : docs.categories.includes(selectedCategory);
           })
           .filter((docs: docInterface) => {
             return selectedTitle === "" || selectedTitle === null
@@ -56,7 +54,7 @@ export default function TableData({ category, titleFiltered }: any) {
             <TableRow key={doc.id}>
               <TableCell>
                 <img
-                  src={doc.img}
+                  src={doc.pathImg}
                   className="h-10 w-10 object-contain border-2 rounded-full bg-white p-1 mx-auto"
                   alt={doc.name}
                 />
@@ -64,7 +62,7 @@ export default function TableData({ category, titleFiltered }: any) {
               <TableCell className="text-left">{doc.name}</TableCell>
               <TableCell className="text-left">{doc.description}</TableCell>
               <TableCell className="text-left">
-                {doc.tag.map((tag: string) => {
+                {doc.categories.map((tag: string) => {
                   switch (tag) {
                     case "front-end":
                       return <Badge className="bg-red-400 mx-1">{tag}</Badge>;
@@ -82,7 +80,7 @@ export default function TableData({ category, titleFiltered }: any) {
               <TableCell className="text-center">
                 <a
                   className="border-border bg-secondary-background text-foreground shadow-shadow rounded-base font-base hover:translate-x-boxShadowX hover:translate-y-boxShadowY cursor-pointer border-2 text-center text-sm transition-all hover:shadow-none sm:text-base p-2 h-8 w-8"
-                  href={doc.docDownload}
+                  href={doc.pathFile}
                   target="_blank"
                 >
                   <span className="material-symbols">download</span>
