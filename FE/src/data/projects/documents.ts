@@ -6,7 +6,7 @@ const documents: docInterface[] = [
     name: "SQL e PostgreSQL",
     description: "Appunti su SQL e PostgreSQL",
     categories: ["database"],
-    pathImg: "/images/1.png",
+    pathImg: "../../assets/images/1.png",
     pathFile: "/doc/Corso_SQL_e_PostgreSQL.pdf",
   },
   {
@@ -14,7 +14,7 @@ const documents: docInterface[] = [
     name: "Node.js e Express.js",
     description: "Appunti su Node.js e Express.js",
     categories: ["back-end"],
-    pathImg: "/images/2.png",
+    pathImg: "../../assets/images/2.png",
     pathFile: "/doc/Corso_Node_ed_Express.pdf",
   },
   {
@@ -22,7 +22,7 @@ const documents: docInterface[] = [
     name: "Sequelize",
     description: "Appunti sull'ORM Sequelize",
     categories: ["back-end", "database"],
-    pathImg: "/images/3.png",
+    pathImg: "../../assets/images/3.png",
     pathFile: "/doc/Corso_Sequelize.pdf",
   },
   {
@@ -30,7 +30,7 @@ const documents: docInterface[] = [
     name: "MongoDB",
     description: "Appunti sul DBMS MongoDB",
     categories: ["database"],
-    pathImg: "/images/4.png",
+    pathImg: "../../assets/images/4.png",
     pathFile: "/doc/Corso_MongoDB.pdf",
   },
   {
@@ -38,7 +38,7 @@ const documents: docInterface[] = [
     name: "Tailwind CSS",
     description: "Appunti sul framework CSS Tailwind",
     categories: ["front-end"],
-    pathImg: "/images/5.png",
+    pathImg: "../../assets/images/5.png",
     pathFile: "/doc/Corso_Tailwind.pdf",
   },
   {
@@ -46,7 +46,7 @@ const documents: docInterface[] = [
     name: "TypeScript",
     description: "Appunti sul superset di JS, TypeScript",
     categories: ["front-end", "back-end"],
-    pathImg: "/images/6.png",
+    pathImg: "../../assets/images/6.png",
     pathFile: "/doc/Corso_TypeScript.pdf",
   },
   {
@@ -54,7 +54,7 @@ const documents: docInterface[] = [
     name: "Angular",
     description: "Appunti sul framework Angular",
     categories: ["front-end"],
-    pathImg: "/images/7.png",
+    pathImg: "../../assets/images/7.png",
     pathFile: "/doc/Corso_Angular.pdf",
   },
   {
@@ -62,7 +62,7 @@ const documents: docInterface[] = [
     name: "Prisma ORM",
     description: "Appunti sull' ORM Prisma",
     categories: ["back-end", "database"],
-    pathImg: "/images/8.png",
+    pathImg: "../../assets/images/8.png",
     pathFile: "/doc/Corso_Prisma.pdf",
   },
   {
@@ -70,7 +70,7 @@ const documents: docInterface[] = [
     name: "GraphQL",
     description: "Appunti sul query language GraphQL",
     categories: ["back-end"],
-    pathImg: "/images/9.png",
+    pathImg: "../../assets/images/9.png",
     pathFile: "/doc/Corso_GraphQL.pdf",
   },
   {
@@ -78,7 +78,7 @@ const documents: docInterface[] = [
     name: "Figma",
     description: "Appunti sul prototipatore Figma",
     categories: ["other"],
-    pathImg: "/images/10.png",
+    pathImg: "../../assets/images/10.png",
     pathFile: "/doc/Corso_Figma.pdf",
   },
   {
@@ -86,7 +86,7 @@ const documents: docInterface[] = [
     name: "Angular Material UI",
     description: "Appunti su Angular Material UI",
     categories: ["front-end"],
-    pathImg: "/images/11.png",
+    pathImg: "../../assets/images/11.png",
     pathFile: "/doc/Corso_Angular_Material_UI.pdf",
   },
   {
@@ -94,7 +94,7 @@ const documents: docInterface[] = [
     name: "Python - Beta",
     description: "Appunti sul linguaggio Python (...in corso)",
     categories: ["back-end"],
-    pathImg: "/images/12.png",
+    pathImg: "../../assets/images/12.png",
     pathFile: "/doc/Corso_Python.pdf",
   },
   {
@@ -102,7 +102,7 @@ const documents: docInterface[] = [
     name: "ElectronJs",
     description: "Appunti sul framework desktop ElectronJs",
     categories: ["front-end", "other"],
-    pathImg: "/images/13.png",
+    pathImg: "../../assets/images/13.png",
     pathFile: "/doc/Corso_ElectronJs.pdf",
   },
   {
@@ -110,7 +110,7 @@ const documents: docInterface[] = [
     name: "Git",
     description: "Appunti sul sistema di versionamento Git",
     categories: ["other"],
-    pathImg: "/images/14.png",
+    pathImg: "../../assets/images/14.png",
     pathFile: "./doc/Git_Sheet.pdf",
   },
   {
@@ -118,7 +118,7 @@ const documents: docInterface[] = [
     name: "React",
     description: "Appunti su React",
     categories: ["front-end"],
-    pathImg: "/images/15.png",
+    pathImg: "../../assets/images/15.png",
     pathFile: "/doc/Corso_React.pdf",
   },
   {
@@ -126,7 +126,7 @@ const documents: docInterface[] = [
     name: "Dart",
     description: "Appunti su Dart",
     categories: ["back-end", "front-end"],
-    pathImg: "/images/16.png",
+    pathImg: "../../assets/images/16.png",
     pathFile: "/doc/Corso_Dart.pdf",
   },
   {
@@ -134,7 +134,7 @@ const documents: docInterface[] = [
     name: "Docker",
     description: "Appunti su Docker",
     categories: ["back-end", "other"],
-    pathImg: "/images/17.png",
+    pathImg: "../../assets/images/17.png",
     pathFile: "/doc/Corso_Docker.pdf",
   },
   {
@@ -142,7 +142,7 @@ const documents: docInterface[] = [
     name: "Sistemi e Reti",
     description: "Appunti su Sistemi e Reti (...in corso)",
     categories: ["other"],
-    pathImg: "/images/18.png",
+    pathImg: "../../assets/images/18.png",
     pathFile: "/doc/Corso_Sistemi_Reti.pdf",
   },
 ];

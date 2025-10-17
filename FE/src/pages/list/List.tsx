@@ -22,6 +22,8 @@ function List() {
         console.log("documents ", docs);
       })
       .catch((error: any) => {
+        console.log(error);
+
         let docume: any = documents;
         setDocuments(docume);
       });
