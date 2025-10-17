@@ -11,7 +11,7 @@ import { ApolloProvider } from "@apollo/client/react";
 //   cache: new InMemoryCache(),
 // });
 
-import { client } from "./apolloCLient.ts";
+import { client } from "./apolloClient.ts";
 
 import App from "./App.jsx";
 

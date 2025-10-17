@@ -1,12 +1,12 @@
 import { gql } from "@apollo/client";
 import { client } from "../../apolloClient"; // importa qui il tuo ApolloClient istanziato
 
-const token = "adjhfvekhg4i";
+// const token = "adjhfvekhg4i";
 
-const headers = {
-  "Content-Type": "application/json",
-  "Access-Control-Allow-Headers": "Content-Type",
-};
+// const headers = {
+//   "Content-Type": "application/json",
+//   "Access-Control-Allow-Headers": "Content-Type",
+// };
 
 // Definisci la query
 const GET_DOCUMENTS = gql`
