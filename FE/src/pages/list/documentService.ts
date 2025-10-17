@@ -60,7 +60,7 @@ export async function downloadDocument(id: number) {
     });
     return data.downloadDocument;
   } catch (err) {
-    console.error("❌ Errore downloadDocument:", err);
+    console.error("Errore downloadDocument:", err);
     throw err;
   }
 }
