@@ -12,6 +12,7 @@ import {
 import type { docInterface } from "@/data/projects/documentsInterface";
 
 import { useEffect, useState } from "react";
+import { downloadDocument } from "./documentService";
 
 export default function TableData({ documents, category, titleFiltered }: any) {
   const [selectedCategory, setSelectedCategory] = useState(category);
@@ -23,6 +24,36 @@ export default function TableData({ documents, category, titleFiltered }: any) {
     setSelectedCategory(category);
     setSelectedTitle(titleFiltered);
   }, [category, titleFiltered]);
+
+  async function download(id: number, fileName: string) {
+    const os = await downloadDocument(Number(id));
+
+    const base64Data = os.data;
+    const format = os.format;
+
+    // Creo il MIME type dinamicamente
+    const mimeMap: Record<string, string> = {
+      pdf: "application/pdf",
+      jpg: "image/jpeg",
+      jpeg: "image/jpeg",
+      png: "image/png",
+    };
+    const mime = mimeMap[format.toLowerCase()] || "application/octet-stream";
+
+    // Costruisco il data URL completo
+    const dataUrl = `data:${mime};base64,${base64Data}`;
+
+    // Converto in blob usando fetch
+    const res = await fetch(dataUrl);
+    const blob = await res.blob();
+
+    // Creo link per il download
+    const link = document.createElement("a");
+    link.href = URL.createObjectURL(blob);
+    link.download = `${fileName}.${format}`;
+    link.click();
+    link.remove();
+  }
 
   return (
     <Table className="rounded-md card">
@@ -94,8 +125,12 @@ export default function TableData({ documents, category, titleFiltered }: any) {
               <TableCell className="text-center">
                 <a
                   className="border-border bg-secondary-background text-foreground shadow-shadow rounded-base font-base hover:translate-x-boxShadowX hover:translate-y-boxShadowY cursor-pointer border-2 text-center text-sm transition-all hover:shadow-none sm:text-base p-2 h-8 w-8"
-                  href={doc.pathFile}
-                  target="_blank"
+                  // href={doc.pathFile}
+                  // target="_blank"
+
+                  onClick={() => {
+                    download(doc.id, doc.name);
+                  }}
                 >
                   <span className="material-symbols">download</span>
                 </a>

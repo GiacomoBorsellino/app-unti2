@@ -7,18 +7,24 @@ import { getDocuments } from "./documentService";
 
 import "./List.css";
 import { Input } from "@/components/ui/input";
+import documents from "@/data/projects/documents";
 
 function List() {
   const [docs, setDocuments] = useState([]);
 
   // ogni volta che la prop "category" cambia → aggiorno lo stato interno
   useEffect(() => {
-    async function fetchData() {
-      const docs = await getDocuments();
-      setDocuments(docs);
-      console.log("documents ", docs);
-    }
-    fetchData();
+    async function fetchData() {}
+    fetchData()
+      .then(async () => {
+        let docs = await getDocuments();
+        setDocuments(docs);
+        console.log("documents ", docs);
+      })
+      .catch((error: any) => {
+        let docume: any = documents;
+        setDocuments(docume);
+      });
   }, []);
 
   const [data, setData] = useState("");
