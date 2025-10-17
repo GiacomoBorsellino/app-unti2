@@ -65,15 +65,29 @@ export default function TableData({ documents, category, titleFiltered }: any) {
                 {doc.categories.map((tag: string) => {
                   switch (tag) {
                     case "front-end":
-                      return <Badge className="bg-red-400 mx-1">{tag}</Badge>;
+                      return (
+                        <Badge key={tag} className="bg-red-400 mx-1">
+                          {tag}
+                        </Badge>
+                      );
                     case "back-end":
-                      return <Badge className="bg-lime-400 mx-1">{tag}</Badge>;
+                      return (
+                        <Badge key={tag} className="bg-lime-400 mx-1">
+                          {tag}
+                        </Badge>
+                      );
                     case "database":
                       return (
-                        <Badge className="bg-yellow-400 mx-1">{tag}</Badge>
+                        <Badge key={tag} className="bg-yellow-400 mx-1">
+                          {tag}
+                        </Badge>
                       );
                     default:
-                      return <Badge className="bg-gray-400 mx-1">{tag}</Badge>;
+                      return (
+                        <Badge key={tag} className="bg-gray-400 mx-1">
+                          {tag}
+                        </Badge>
+                      );
                   }
                 })}
               </TableCell>

@@ -1,6 +1,13 @@
 import { gql } from "@apollo/client";
 import { client } from "../../apolloClient"; // importa qui il tuo ApolloClient istanziato
 
+const token = "adjhfvekhg4i";
+
+const headers = {
+  "Content-Type": "application/json",
+  "Access-Control-Allow-Headers": "Content-Type",
+};
+
 // Definisci la query
 const GET_DOCUMENTS = gql`
   query GetDocuments {
@@ -16,14 +23,11 @@ const GET_DOCUMENTS = gql`
 `;
 
 const DOWNLOAD_FILE = gql`
-  query DownloadDocument($input: inputRichiedente) {
+  query DownloadDocument($input: Int) {
     downloadDocument(input: $input) {
-      id
-      name
-      description
-      pathFile
-      pathImg
-      categories
+      format
+      size
+      data
     }
   }
 `;
@@ -42,10 +46,16 @@ export async function getDocuments() {
   }
 }
 
-export async function downloadDocument() {
+export async function downloadDocument(id: number) {
   try {
     const { data }: any = await client.query({
       query: DOWNLOAD_FILE,
+      variables: {
+        input: id,
+      },
+      // context: {
+      //   headers: headers,
+      // },
       fetchPolicy: "no-cache", // evita dati vecchi in cache se serve
     });
     return data.downloadDocument;

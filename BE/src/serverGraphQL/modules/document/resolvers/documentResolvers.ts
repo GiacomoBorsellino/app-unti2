@@ -21,7 +21,7 @@ const query = {
           return data;
         });
 
-      console.log("================= IN getDocuments", docs);
+      // console.log("================= IN getDocuments", docs);
       let pathUpload: string = "uploads/images";
       return docs.map((file) => {
         const thumbnailPath = path.join(pathUpload, file.pathImg.substring(7)); // rivedi path su db e sistem
@@ -51,11 +51,13 @@ const query = {
     }
   },
   async downloadDocument(parent, args, context, info) {
-    // console.log("================= IN getDocuments", parent.input);
+    console.log("================= IN downloadDocument", args.input);
 
-    const id = parent.input.id;
+    const id = args.input;
+    let pathUpload: string = "uploads/doc";
+
     try {
-      let file = await db.main.document
+      let file: any = await db.main.document
         .findUnique({
           where: {
             id: id,
@@ -64,8 +66,16 @@ const query = {
         .then((file) => {
           return file;
         });
+      console.log(file.pathFile.substring(5));
 
-      return file;
+      const filePath = path.join(pathUpload, file.pathFile.substring(5)); // rivedi path su db e sistem
+      const buffer = fs.readFileSync(filePath);
+      const base64 = buffer.toString("base64");
+
+      const ext = path.extname(file.pathFile); // ".pdf"
+      const format = ext.replace(".", ""); // "pdf"s
+
+      return { format: format, size: 0, data: base64 };
     } catch (error) {
       console.log("error ", error);
     }

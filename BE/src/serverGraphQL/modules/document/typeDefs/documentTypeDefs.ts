@@ -16,12 +16,18 @@ const documentTypeDefs = gql`
     documents: [Document]
   }
 
+  type File {
+    format: String
+    size: Int
+    data: String
+  }
+
   type Query {
     """
     test queries main
     """
     getDocuments: [Document]
-    downloadDocument(input: Int): [Document]
+    downloadDocument(input: Int): File
   }
 
   type Mutation {
