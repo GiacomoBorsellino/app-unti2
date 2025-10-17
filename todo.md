@@ -4,6 +4,7 @@
 
 - [x] togli bottoniera (metti input)
 - [x] Metti input ricerca in list
+- [x] graphql download
 - [] download icone base
 - [] style scrollbars
 - [] homepage
@@ -16,6 +17,7 @@
 - [] controlla "type": "commonjs",
 - [x] semplice db
 - [x] blob thumb
+- [x] graphql download
 - [] user
 - [] definisci er
 - [] graphql upload

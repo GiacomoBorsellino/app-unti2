@@ -30,7 +30,12 @@
 - React
 - Vite
 - ShadCN UI
-- Webpack
+- Node
+- API REST
+- GraphQL
+- Apollo
+- PostgreSQL
+- Prisma ORM
 
 ## API e utilizzo
 
@@ -38,7 +43,7 @@ Semplice consultazione tramite demo live al seguente link: https://anointed.netl
 
 ## Prerequisiti
 
-- Nessuno
+- Installa, DBMS Postgres, Node (cinsigliato Volta), npm
 
 ## Installazione
 
@@ -54,7 +59,7 @@ Semplice consultazione tramite demo live al seguente link: https://anointed.netl
    Cd app-unti2
    ```
 
-3. Installa NPM
+3. Installa NPM (FE e BE)
 
    ```sh
    npm install npm@latest -g
@@ -62,11 +67,23 @@ Semplice consultazione tramite demo live al seguente link: https://anointed.netl
    npm run dev
    ```
 
-4. Avvia il progetto
+4. Avvia migrate BE
 
- ```sh
-   npm run dev
-   ```
+```sh
+  npm run migrate_main
+```
+
+5. Fai Seeding dati db (BE/seed/)
+
+```sh
+  avvia sql query
+```
+
+4. Avvia il progetto (per FE e BE)
+
+```sh
+  npm run start
+```
 
 ## Licenza
 
