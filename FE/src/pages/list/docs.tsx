@@ -53,7 +53,7 @@ export default function Docs({ documents, category, titleFiltered }: any) {
 
   return (
     <div>
-      <div className="grid sm:grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6 pb-8 ">
+      <div className="grid sm:grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-6 pb-8 ">
         {documents
           .sort(compareFn)
           .filter((docs: docInterface) => {

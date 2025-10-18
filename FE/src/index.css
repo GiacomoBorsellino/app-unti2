@@ -82,3 +82,25 @@
     outline:none;
 }
 
+/* width */
+::-webkit-scrollbar {
+  width: 20px;
+  border-left: 4px solid #000;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #e6e6e6; 
+    border: 2px solid #000;
+
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #3f3f3f;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #363636;
+}

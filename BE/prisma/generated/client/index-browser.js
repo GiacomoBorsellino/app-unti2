@@ -144,6 +144,17 @@ exports.Prisma.UserScalarFieldEnum = {
   email: 'email'
 };
 
+exports.Prisma.RolesScalarFieldEnum = {
+  id: 'id',
+  name: 'name',
+  description: 'description'
+};
+
+exports.Prisma.UserRolesScalarFieldEnum = {
+  userId: 'userId',
+  roleId: 'roleId'
+};
+
 exports.Prisma.SortOrder = {
   asc: 'asc',
   desc: 'desc'
@@ -159,7 +170,9 @@ exports.Prisma.ModelName = {
   Document: 'Document',
   Categories: 'Categories',
   DocumentCategories: 'DocumentCategories',
-  User: 'User'
+  User: 'User',
+  Roles: 'Roles',
+  UserRoles: 'UserRoles'
 };
 
 /**

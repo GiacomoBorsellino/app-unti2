@@ -116,6 +116,17 @@ exports.Prisma.UserScalarFieldEnum = {
   email: 'email'
 };
 
+exports.Prisma.RolesScalarFieldEnum = {
+  id: 'id',
+  name: 'name',
+  description: 'description'
+};
+
+exports.Prisma.UserRolesScalarFieldEnum = {
+  userId: 'userId',
+  roleId: 'roleId'
+};
+
 exports.Prisma.SortOrder = {
   asc: 'asc',
   desc: 'desc'
@@ -131,7 +142,9 @@ exports.Prisma.ModelName = {
   Document: 'Document',
   Categories: 'Categories',
   DocumentCategories: 'DocumentCategories',
-  User: 'User'
+  User: 'User',
+  Roles: 'Roles',
+  UserRoles: 'UserRoles'
 };
 /**
  * Create the Client
@@ -180,13 +193,13 @@ const config = {
       }
     }
   },
-  "inlineSchema": "generator client {\n  provider = \"prisma-client-js\"\n  output   = \"./generated/client\"\n}\n\ndatasource db {\n  provider = \"postgresql\"\n  url      = env(\"DATABASE_URL\")\n}\n\nmodel Document {\n  id          Int                  @id @default(autoincrement())\n  name        String               @unique\n  description String\n  pathImg     String\n  pathFile    String\n  categories  DocumentCategories[] // Esplicito la tabella di relazione per rinominare colonne\n}\n\nmodel Categories {\n  id          Int                  @id @default(autoincrement())\n  description String\n  documents   DocumentCategories[] // Esplicito la tabella di relazione per rinominare colonne\n}\n\nmodel DocumentCategories {\n  document   Document   @relation(fields: [documentId], references: [id])\n  documentId Int\n  category   Categories @relation(fields: [categoryId], references: [id])\n  categoryId Int\n\n  @@id([documentId, categoryId]) // PK composta\n}\n\nmodel User {\n  id    Int    @id @default(autoincrement())\n  name  String\n  email String\n}\n",
-  "inlineSchemaHash": "d5058d53fc021e22f43600750c24ee8b8de34a4adeb166c8581c02d84fd0bdf5",
+  "inlineSchema": "generator client {\n  provider = \"prisma-client-js\"\n  output   = \"./generated/client\"\n}\n\ndatasource db {\n  provider = \"postgresql\"\n  url      = env(\"DATABASE_URL\")\n}\n\nmodel Document {\n  id          Int                  @id @default(autoincrement())\n  name        String               @unique\n  description String\n  pathImg     String\n  pathFile    String\n  categories  DocumentCategories[] // Esplicito la tabella di relazione per rinominare colonne\n}\n\nmodel Categories {\n  id          Int                  @id @default(autoincrement())\n  description String\n  documents   DocumentCategories[] // Esplicito la tabella di relazione per rinominare colonne\n}\n\nmodel DocumentCategories {\n  document   Document   @relation(fields: [documentId], references: [id])\n  documentId Int\n  category   Categories @relation(fields: [categoryId], references: [id])\n  categoryId Int\n\n  @@id([documentId, categoryId]) // PK composta\n}\n\nmodel User {\n  id    Int         @id @default(autoincrement())\n  name  String\n  email String\n  roles UserRoles[] // Esplicito la tabella di relazione per rinominare colonne\n}\n\nmodel Roles {\n  id          Int         @id @default(autoincrement())\n  name        String\n  description String\n  users       UserRoles[] // Esplicito la tabella di relazione per rinominare colonne\n}\n\nmodel UserRoles {\n  user   User  @relation(fields: [userId], references: [id])\n  userId Int\n  role   Roles @relation(fields: [roleId], references: [id])\n  roleId Int\n\n  @@id([userId, roleId]) // PK composta\n}\n",
+  "inlineSchemaHash": "40733402e22fe6907da4925e2dbe6391c12df932115148af5718c292f3673f7a",
   "copyEngine": true
 }
 config.dirname = '/'
 
-config.runtimeDataModel = JSON.parse("{\"models\":{\"Document\":{\"fields\":[{\"name\":\"id\",\"kind\":\"scalar\",\"type\":\"Int\"},{\"name\":\"name\",\"kind\":\"scalar\",\"type\":\"String\"},{\"name\":\"description\",\"kind\":\"scalar\",\"type\":\"String\"},{\"name\":\"pathImg\",\"kind\":\"scalar\",\"type\":\"String\"},{\"name\":\"pathFile\",\"kind\":\"scalar\",\"type\":\"String\"},{\"name\":\"categories\",\"kind\":\"object\",\"type\":\"DocumentCategories\",\"relationName\":\"DocumentToDocumentCategories\"}],\"dbName\":null},\"Categories\":{\"fields\":[{\"name\":\"id\",\"kind\":\"scalar\",\"type\":\"Int\"},{\"name\":\"description\",\"kind\":\"scalar\",\"type\":\"String\"},{\"name\":\"documents\",\"kind\":\"object\",\"type\":\"DocumentCategories\",\"relationName\":\"CategoriesToDocumentCategories\"}],\"dbName\":null},\"DocumentCategories\":{\"fields\":[{\"name\":\"document\",\"kind\":\"object\",\"type\":\"Document\",\"relationName\":\"DocumentToDocumentCategories\"},{\"name\":\"documentId\",\"kind\":\"scalar\",\"type\":\"Int\"},{\"name\":\"category\",\"kind\":\"object\",\"type\":\"Categories\",\"relationName\":\"CategoriesToDocumentCategories\"},{\"name\":\"categoryId\",\"kind\":\"scalar\",\"type\":\"Int\"}],\"dbName\":null},\"User\":{\"fields\":[{\"name\":\"id\",\"kind\":\"scalar\",\"type\":\"Int\"},{\"name\":\"name\",\"kind\":\"scalar\",\"type\":\"String\"},{\"name\":\"email\",\"kind\":\"scalar\",\"type\":\"String\"}],\"dbName\":null}},\"enums\":{},\"types\":{}}")
+config.runtimeDataModel = JSON.parse("{\"models\":{\"Document\":{\"fields\":[{\"name\":\"id\",\"kind\":\"scalar\",\"type\":\"Int\"},{\"name\":\"name\",\"kind\":\"scalar\",\"type\":\"String\"},{\"name\":\"description\",\"kind\":\"scalar\",\"type\":\"String\"},{\"name\":\"pathImg\",\"kind\":\"scalar\",\"type\":\"String\"},{\"name\":\"pathFile\",\"kind\":\"scalar\",\"type\":\"String\"},{\"name\":\"categories\",\"kind\":\"object\",\"type\":\"DocumentCategories\",\"relationName\":\"DocumentToDocumentCategories\"}],\"dbName\":null},\"Categories\":{\"fields\":[{\"name\":\"id\",\"kind\":\"scalar\",\"type\":\"Int\"},{\"name\":\"description\",\"kind\":\"scalar\",\"type\":\"String\"},{\"name\":\"documents\",\"kind\":\"object\",\"type\":\"DocumentCategories\",\"relationName\":\"CategoriesToDocumentCategories\"}],\"dbName\":null},\"DocumentCategories\":{\"fields\":[{\"name\":\"document\",\"kind\":\"object\",\"type\":\"Document\",\"relationName\":\"DocumentToDocumentCategories\"},{\"name\":\"documentId\",\"kind\":\"scalar\",\"type\":\"Int\"},{\"name\":\"category\",\"kind\":\"object\",\"type\":\"Categories\",\"relationName\":\"CategoriesToDocumentCategories\"},{\"name\":\"categoryId\",\"kind\":\"scalar\",\"type\":\"Int\"}],\"dbName\":null},\"User\":{\"fields\":[{\"name\":\"id\",\"kind\":\"scalar\",\"type\":\"Int\"},{\"name\":\"name\",\"kind\":\"scalar\",\"type\":\"String\"},{\"name\":\"email\",\"kind\":\"scalar\",\"type\":\"String\"},{\"name\":\"roles\",\"kind\":\"object\",\"type\":\"UserRoles\",\"relationName\":\"UserToUserRoles\"}],\"dbName\":null},\"Roles\":{\"fields\":[{\"name\":\"id\",\"kind\":\"scalar\",\"type\":\"Int\"},{\"name\":\"name\",\"kind\":\"scalar\",\"type\":\"String\"},{\"name\":\"description\",\"kind\":\"scalar\",\"type\":\"String\"},{\"name\":\"users\",\"kind\":\"object\",\"type\":\"UserRoles\",\"relationName\":\"RolesToUserRoles\"}],\"dbName\":null},\"UserRoles\":{\"fields\":[{\"name\":\"user\",\"kind\":\"object\",\"type\":\"User\",\"relationName\":\"UserToUserRoles\"},{\"name\":\"userId\",\"kind\":\"scalar\",\"type\":\"Int\"},{\"name\":\"role\",\"kind\":\"object\",\"type\":\"Roles\",\"relationName\":\"RolesToUserRoles\"},{\"name\":\"roleId\",\"kind\":\"scalar\",\"type\":\"Int\"}],\"dbName\":null}},\"enums\":{},\"types\":{}}")
 defineDmmfProperty(exports.Prisma, config.runtimeDataModel)
 config.engineWasm = {
   getRuntime: async () => require('./query_engine_bg.js'),

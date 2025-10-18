@@ -5,8 +5,8 @@
 - [x] togli bottoniera (metti input)
 - [x] Metti input ricerca in list
 - [x] graphql download
+- [x] style scrollbars
 - [] download icone base
-- [] style scrollbars
 - [] homepage
 - [] sistema stile
 - [] Scrivi wtf
@@ -22,3 +22,4 @@
 - [] definisci er
 - [] graphql upload
 - [] refresh token
+- [] Struttrua utenza RBAC

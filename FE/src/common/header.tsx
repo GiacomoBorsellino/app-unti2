@@ -1,6 +1,6 @@
 import lohacker from "../assets/lohacker.svg";
 import { Link } from "react-router-dom";
-import Sidebar from "@/Sidebar";
+import Sidebar from "@/common/Sidebar";
 
 function Header() {
   return (
